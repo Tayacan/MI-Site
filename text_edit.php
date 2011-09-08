@@ -2,6 +2,7 @@
 
 <html>
 <head>
+	<!-- This is a comment //-->
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Text editor</title>
 	<link rel="stylesheet" type="text/css" href="style.css" />
