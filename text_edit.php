@@ -60,17 +60,19 @@
 <body>
 	
 	<!-- Knapper -->
-	<input type="button" value="B" onclick="mod_selection('[b]','[/b]')" />
-	<input type="button" value="I" onclick="mod_selection('[i]','[/i]')" />
-	<input type="button" value="U" onclick="mod_selection('[u]','[/u]')" />
+	<div>
+		<input type="button" value="B" onclick="mod_selection('[b]','[/b]')" />
+		<input type="button" value="I" onclick="mod_selection('[i]','[/i]')" />
+		<input type="button" value="U" onclick="mod_selection('[u]','[/u]')" />
 	<br />
 	
 	<!-- Text area -->
-	<textarea class="text_edit" id="my_text"></textarea>
+	<textarea class="text_edit" id="my_text" rows="10" cols="30"></textarea>
 	<br />
 	
 	<!-- Submit button -->
-	<input type="button" value="Vis tekst" onclick="view_text()" />
+		<input type="button" value="Vis tekst" onclick="view_text()" />
+	</div>
 	
 	<!-- Empty div to put the text in -->
 	<div id="view_text">
