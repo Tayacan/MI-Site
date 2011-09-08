@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	
 	<script type="text/javascript">
+	<!--
 		function view_text () {
 			// Find html elements.
 			var textArea = document.getElementById('my_text');
@@ -53,6 +54,7 @@
 				textArea.value = begin + val1 + selection + val2 + end;
 			}
 		}
+	// -->
 	</script>
 	
 	
