@@ -6,8 +6,8 @@
 <body>
 
 <?php
-	echo "Hej, jeg er skrevet med php.<br />";
-	echo "<a href='text_edit.php'>Text editor</a><br />";
+	echo "Index file";
+	require('file_viewer.php');
 ?>
 
 </body>
