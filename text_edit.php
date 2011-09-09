@@ -61,18 +61,18 @@
 </head>
 <body>
 	
-	<!-- Knapper -->
-	<div>
+	<div> <!-- Everything is in a div. -->
+		<!-- Knapper -->
 		<input type="button" value="B" onclick="mod_selection('[b]','[/b]')" />
 		<input type="button" value="I" onclick="mod_selection('[i]','[/i]')" />
 		<input type="button" value="U" onclick="mod_selection('[u]','[/u]')" />
-	<br />
+		<br />
 	
-	<!-- Text area -->
-	<textarea class="text_edit" id="my_text" rows="10" cols="30"></textarea>
-	<br />
+		<!-- Text area -->
+		<textarea class="text_edit" id="my_text" rows="10" cols="30"></textarea>
+		<br />
 	
-	<!-- Submit button -->
+		<!-- Submit button -->
 		<input type="button" value="Vis tekst" onclick="view_text()" />
 	</div>
 	

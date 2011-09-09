@@ -7,7 +7,7 @@
 
 <?php
 	echo "Index file";
-	require('file_viewer.php');
+	require('file_viewer.php'); // See all files in current directory.
 ?>
 
 </body>

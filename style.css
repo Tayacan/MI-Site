@@ -1,9 +1,23 @@
+/*
+	TEXT EDITOR CSS
+*/
+
+/*
+	The text editor
+*/
 .text_edit {
 	width: 500px;
 	height: 300px;
 	resize: none;
 }
 
+/*
+	The window where the text from the editor is displayed
+*/
 #view_text {
-	width: 500px;
+	width: 500px; /* Same width as .text_edit */
 }
+
+/*
+	TEXT EDITOR END
+*/
