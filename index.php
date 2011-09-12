@@ -6,7 +6,7 @@
 <body>
 
 <?php
-	echo "Index file";
+	echo "Index file <br />";
 	require('file_viewer.php'); // See all files in current directory.
 ?>
 

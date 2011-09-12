@@ -11,11 +11,31 @@
 	resize: none;
 }
 
+.tag_button {
+	font-family: Courier New;
+}
+
 /*
 	The window where the text from the editor is displayed
 */
 #view_text {
-	width: 500px; /* Same width as .text_edit */
+	width: 800px; /* Same width as .text_edit */
+	font-family: Calibri, Times New Roman, Serif;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+/* Code tag */
+pre {
+	background-color: #E0E0E0;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #A0A0A0;
+	padding-left: 5px;
+	padding-right: 5px;
+	overflow: auto;
+	max-height: 500px;
+	color: #303030;
 }
 
 /*
