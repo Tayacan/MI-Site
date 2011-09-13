@@ -64,6 +64,10 @@
 			text = text.replace(/\[\:P]/gi, "<img src='icons/tongue.png' class='smiley' />");
 			text = text.replace(/\[O\:\)]/gi, "<img src='icons/angel.png' class='smiley' />");
 			text = text.replace(/\[\:\$]/gi, "<img src='icons/cha-ching.png' class='smiley' />");
+			text = text.replace(/\[\:\@]/gi, "<img src='icons/angry.png' class='smiley' />");
+			text = text.replace(/\[\:\*]/gi, "<img src='icons/kissy.png' class='smiley' />");
+			text = text.replace(/\[nervous]/gi, "<img src='icons/nervous.png' class='smiley' />");
+			text = text.replace(/\[\:x]/gi, "<img src='icons/vault.png' class='smiley' />");
 			
 			// Print the text in the div made for it.
 			div.innerHTML = text;
@@ -157,6 +161,18 @@
 			</button>
 			<button type="button" onclick="insert_smiley('[:$]')" style="float:left; margin:0;">
 				<img src="icons/cha-ching.png" class="smiley" alt="[:$]" title="[:$]" />
+			</button>
+			<button type="button" onclick="insert_smiley('[:@]')" style="float:left; margin:0;">
+				<img src="icons/angry.png" class="smiley" alt="[:@]" title="[:@]" />
+			</button>
+			<button type="button" onclick="insert_smiley('[:*]')" style="float:left; margin:0;">
+				<img src="icons/kissy.png" class="smiley" alt="[:*]" title="[:*]" />
+			</button>
+			<button type="button" onclick="insert_smiley('[nervous]')" style="float:left; margin:0;">
+				<img src="icons/nervous.png" class="smiley" alt="[nervous]" title="[nervous]" />
+			</button>
+			<button type="button" onclick="insert_smiley('[:x]')" style="float:left; margin:0;">
+				<img src="icons/vault.png" class="smiley" alt="[:x]" title="[:x]" />
 			</button>
 		</div><br />
 		
