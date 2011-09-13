@@ -51,6 +51,20 @@
 			text = text.replace(/\<pre class=\'prettyprint linenums\:1\'\>\<br \/\>/gi, "<pre class='prettyprint linenums:1'>"); // Remove extra newline at start of code block.
 			text = text.replace(/\<\/pre\>\<br \/\>/gi, "</pre>"); // Remove extra newline after code block.
 			
+			// Smileys :D
+			text = text.replace(/\[\:\)\]/gi, "<img src='icons/happy.png' class='smiley' />");
+			text = text.replace(/\[\:D\]/gi, "<img src='icons/grin.png' class='smiley' />");
+			text = text.replace(/\[\:\/\]/gi, "<img src='icons/hmm.png' class='smiley' />");
+			text = text.replace(/\[B\)\]/gi, "<img src='icons/cool.png' class='smiley' />");
+			text = text.replace(/\[\:\(\]/gi, "<img src='icons/sad.png' class='smiley' />");
+			text = text.replace(/\[\:\'\(\]/gi, "<img src='icons/weepy.png' class='smiley' />");
+			text = text.replace(/\[\;\)\]/gi, "<img src='icons/winky.png' class='smiley' />");
+			text = text.replace(/\[blush]/gi, "<img src='icons/shame.png' class='smiley' />");
+			text = text.replace(/\[\:O]/gi, "<img src='icons/surprise.png' class='smiley' />");
+			text = text.replace(/\[\:P]/gi, "<img src='icons/tongue.png' class='smiley' />");
+			text = text.replace(/\[O\:\)]/gi, "<img src='icons/angel.png' class='smiley' />");
+			text = text.replace(/\[\:\$]/gi, "<img src='icons/cha-ching.png' class='smiley' />");
+			
 			// Print the text in the div made for it.
 			div.innerHTML = text;
 		}
@@ -71,11 +85,21 @@
 			}
 		}
 		
+		function insert_smiley (smiley) {
+			var textArea = document.getElementById('my_text');
+			if (typeof(textArea.selectionStart) != "undefined") {
+				var begin = textArea.value.substr(0, textArea.selectionStart);
+				var end = textArea.value.substr(textArea.selectionEnd);
+				
+				textArea.value = begin + smiley + end;
+			}
+		}
+		
 		function scroll_fix () {
-			var div = document.getElementById('view_text');
+			var pre = document.getElementsByClass('prettyprint linenums:1');
 			var objects = document.getElementsByTagName('ol');
 			for(var i = 0; i < objects.length; i++) {
-				objects[i].style.width = div.clientWidth;
+				objects[i].style.width = pre[0].width;
 			}
 		}
 	// -->
@@ -93,12 +117,53 @@
 		<input type="button" value="[code]" class="tag_button" onclick="mod_selection('[code]','[/code]')" />
 		<br />
 	
-		<!-- Text area -->
-		<textarea class="text_edit" id="my_text" rows="10" cols="30"></textarea>
-		<br />
-	
+		<div id="smiley_buttons" style="float:top; display:block; height:300px; width:660px;">
+			<!-- Text area -->
+			<textarea class="text_edit" id="my_text" rows="10" cols="30"></textarea>
+			
+			<!-- Smiley buttons -->
+			<button type="button" onclick="insert_smiley('[:)]')" style="float:left; margin:0;">
+				<img src="icons/happy.png" class="smiley" alt="[:)]" title="[:)]" />
+			</button>
+			<button type="button" onclick="insert_smiley('[:D]')" style="float:left; margin:0;">
+				<img src="icons/grin.png" class="smiley" alt="[:D]" title="[:D]" />
+			</button>
+			<button type="button" onclick="insert_smiley('[:/]')" style="float:left; margin:0;">
+				<img src="icons/hmm.png" class="smiley" alt="[:/]" title="[:/]" />
+			</button>
+			<button type="button" onclick="insert_smiley('[B)]')" style="float:left; margin:0;">
+				<img src="icons/cool.png" class="smiley" alt="[B)]" title="[B)]" />
+			</button>
+			<button type="button" onclick="insert_smiley('[:(]')" style="float:left; margin:0;">
+				<img src="icons/sad.png" class="smiley" alt="[:(]" title="[:(]" />
+			</button>
+			<button type="button" onclick="insert_smiley('[:\'(]')" style="float:left; margin:0;">
+				<img src="icons/weepy.png" class="smiley" alt="[:'(]" title="[:'(]" />
+			</button>
+			<button type="button" onclick="insert_smiley('[;)]')" style="float:left; margin:0;">
+				<img src="icons/winky.png" class="smiley" alt="[;)]" title="[;)]" />
+			</button>
+			<button type="button" onclick="insert_smiley('[blush]')" style="float:left; margin:0;">
+				<img src="icons/shame.png" class="smiley" alt="[blush]" title="[blush]" />
+			</button>
+			<button type="button" onclick="insert_smiley('[:O]')" style="float:left; margin:0;">
+				<img src="icons/surprise.png" class="smiley" alt="[:O]" title="[:O]" />
+			</button>
+			<button type="button" onclick="insert_smiley('[:P]')" style="float:left; margin:0;">
+				<img src="icons/tongue.png" class="smiley" alt="[:P]" title="[:P]" />
+			</button>
+			<button type="button" onclick="insert_smiley('[O:)]')" style="float:left; margin:0;">
+				<img src="icons/angel.png" class="smiley" alt="[O:)]" title="[O:)]" />
+			</button>
+			<button type="button" onclick="insert_smiley('[:$]')" style="float:left; margin:0;">
+				<img src="icons/cha-ching.png" class="smiley" alt="[:$]" title="[:$]" />
+			</button>
+		</div><br />
+		
 		<!-- Submit button -->
-		<input type="button" value="Vis tekst" onclick="view_text();prettyPrint()" />
+		<div>
+			<input type="button" value="Vis tekst" onclick="view_text();prettyPrint()" />
+		</div>
 	</div>
 	
 	<!-- Empty div to put the text in -->

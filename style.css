@@ -9,6 +9,7 @@
 	width: 500px;
 	height: 300px;
 	resize: none;
+	float: left;
 }
 
 .tag_button {
@@ -36,6 +37,13 @@ pre {
 	overflow: auto;
 	max-height: 500px;
 	color: #303030;
+}
+
+/* Smileys */
+.smiley {
+	width: 30px;
+	height: 30px;
+	image-rendering: optimizeQuality;
 }
 
 /*
