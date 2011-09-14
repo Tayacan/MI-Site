@@ -77,6 +77,19 @@
 			// Get the text area
 			var textArea = document.getElementById('my_text');
 			
+			// IE specific code.
+			if( -1 != navigator.userAgent.indexOf ("MSIE") ) { 
+				
+				var range = document.selection.createRange();
+				var stored_range = range.duplicate();
+				
+				if(stored_range.length > 0) {
+					stored_range.moveToElementText(textArea);
+					stored_range.setEndPoint('EndToEnd', range);
+					textArea.selectionStart = stored_range.text.length - range.text.length;
+					textArea.selectionEnd = textArea.selectionStart + range.text.length;
+				}
+			}
 			// Do we even have a selection?
 			if (typeof(textArea.selectionStart) != "undefined") {
 				// Split the text in three pieces - the selection, and what comes before and after.
@@ -91,6 +104,28 @@
 		
 		function insert_smiley (smiley) {
 			var textArea = document.getElementById('my_text');
+			
+			// IE specific code.
+			if( -1 != navigator.userAgent.indexOf ("MSIE") ) { 
+				
+				var range = document.selection.createRange();
+				var stored_range = range.duplicate();
+				
+				if(stored_range.length > 0) {
+					stored_range.moveToElementText(textArea);
+					stored_range.setEndPoint('EndToEnd', range);
+					textArea.selectionStart = stored_range.text.length - range.text.length;
+					textArea.selectionEnd = textArea.selectionStart + range.text.length;
+				}
+				/*else { //If IE bugs when trying to insert smileys, try to uncomment this code.
+					textArea.focus();
+					stored_range = document.selection.createRange();
+					stored_range.moveStart('character',-textArea.value.length);
+					textArea.selectionStart = stored_range.text.length;
+					textArea.selectionEnd = stored_range.text.length;
+				}*/
+			}
+			
 			if (typeof(textArea.selectionStart) != "undefined") {
 				var begin = textArea.value.substr(0, textArea.selectionStart);
 				var end = textArea.value.substr(textArea.selectionEnd);
@@ -121,7 +156,7 @@
 		<input type="button" value="[code]" class="tag_button" onclick="mod_selection('[code]','[/code]')" />
 		<br />
 	
-		<div id="smiley_buttons" style="float:top; display:block; height:300px; width:660px;">
+		<div id="smiley_buttons" style="float:top; display:block; height:300px; width:680px;">
 			<!-- Text area -->
 			<textarea class="text_edit" id="my_text" rows="10" cols="30"></textarea>
 			
