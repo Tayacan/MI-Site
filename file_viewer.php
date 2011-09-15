@@ -1,5 +1,6 @@
 <?php
 	if ($handle = opendir('.')) { // Try opening current directory.
+		echo "<div>";
 		echo "Directory handle: $handle<br />";
 		echo "Files:<br />";
 		
@@ -8,6 +9,7 @@
 				echo "<a href='$file'>$file</a><br />"; // Link to the file.
 			}
 		}
+		echo "</div>";
 		
 		closedir($handle); // Close directory
 	}
