@@ -1,27 +1,15 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title></title>
-	<link rel="stylesheet" type="text/css" href="style.css" />
-</head>
+<?php
+	require('../util.php');
+?>
 
-<body>
-	<a href="#">
-	<div class="box">
-		<h3><span>Header</span></h3>
-		<p>
-			This is text inside a box. Trying with more text. Does it wrap proberbly? Yes it does!
-		</p>
-	</div>
-	</a>
-	<a href="#">
-	<div class="box">
-		<h3><span>Header2</span></h3>
-		<p>
-			Second box, with more text. How does it look?
-		</p>
-	</div>
-	</a>
-</body>
-
-</html>
+<?php
+	top();
+	$textedit_vals = array('Text editor','This is the text editor for the forum.','../text_edit.php');
+	$chatbox_vals = array('Chatbox','The chatbox is currently under development.','../scroll_div.php');
+	$index_vals = array('Home','The front page of the site.','../index.php');
+	
+	make_box($textedit_vals[0],$textedit_vals[1],$textedit_vals[2]);
+	make_box($chatbox_vals[0],$chatbox_vals[1],$chatbox_vals[2]);
+	make_box($index_vals[0],$index_vals[1],$index_vals[2]);
+	bottom();
+?>
