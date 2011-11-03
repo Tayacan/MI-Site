@@ -9,7 +9,7 @@
 -->
 
 <?php
-        if($conn = mysql_connect('localhost','root','tayacan')) {
+        if($conn = mysql_connect('localhost',$_POST['mysql_username'],$_POST['mysql_pw'])) {
 		echo "Logged in!<br />";
 		echo 'Checking database miForum<br />';
                 if(!mysql_select_db("miForum")) {
@@ -131,3 +131,5 @@
 		}
 	}
 ?>
+
+<a href="index.php">Return to Index page</a>
