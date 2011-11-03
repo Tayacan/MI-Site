@@ -1,6 +1,6 @@
 <?php //this is the php datebase code
 $forbindelse=mysql_connect("localhost","root","");
-mysql_selct_db("miForum");
+mysql_select_db("miForum");
 ?>
 <?php require("util.php");//thus is the html top
 	top();
