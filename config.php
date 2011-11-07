@@ -16,6 +16,7 @@
 			echo 'Creating database<br />';
                         mysql_query("CREATE DATABASE  `miForum` ;") or die(mysql_error());
 			echo 'Created database miForum<br />';
+			mysql_select_db("miForum") or die("Something went wrong, can't connect to the new database!");
                 } else {
 			echo 'Database already there.<br />';
 		}
@@ -128,6 +129,16 @@
                 
         	} else {
 			// Code for checking columns of table.
+		}
+		// Create mi-site user.
+		$checkUser = "SELECT user FROM mysql.user WHERE user='misite'";
+		if(mysql_num_rows(mysql_query($checkUser)) < 1) {
+			$query = "CREATE USER 'misite'@'localhost' IDENTIFIED BY  'kummefryser';";
+			$grant = "GRANT ALL PRIVILEGES ON  `miForum` . * TO  'misite'@'localhost' WITH GRANT OPTION ;"; // F**king long query.
+			mysql_query($query) or die(mysql_error());
+			mysql_query($grant) or die(mysql_error());
+			
+			echo "Created user misite";
 		}
 	}
 ?>
