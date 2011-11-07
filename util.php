@@ -23,9 +23,25 @@
 		$dir = $cssdir.'stylesheet.css';
 		echo "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.1//EN' 'http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd'>";
 
-		echo "<html xmlns='http://www.w3.org/1999/xhtml'><head><meta http-equiv='Content-Type' content='text/html; charset=utf-8' /><title>".$title."</title><link rel='stylesheet' type='text/css' href='".$dir."' /></head><body>";
-		echo "<h1>Replace this with MI logo</h1>";
+		echo "<html xmlns='http://www.w3.org/1999/xhtml'><head><meta http-equiv='Content-Type' content='text/html; charset=utf-8' /><title>".$title."</title><link rel='stylesheet' type='text/css' href='".$dir."' /></head><body><div class='content'>";
+		echo "<div style='margin: 5px;'><h1>Replace this with MI logo</h1></div>";
+		menu();
 
+	}
+
+	function menu() {
+		$mainPages = array(	'Forside' => 'index.php', 
+					'Forum' => 'forum.php',
+					'Artikler' => '#',
+					'Om MI' => '#');
+
+		echo "<div class='menu'>";
+
+		foreach ($mainPages as $name => $page) {
+			echo "<a class='menulink' href='".$page."'>".$name."</a>";
+		}
+
+		echo "</div>";
 	}
 
 	function bottom() {
@@ -33,6 +49,7 @@
 			Ends tags - will later be used for a footer.
 		*/
 
+		echo "</div>";
 		echo "</body>";
 		echo "</html>";
 	}

@@ -5,13 +5,43 @@ body {
 	background-color: #F0F0FF;
 }
 
+div.content {
+	width: 640px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.menu {
+	height: 20px;
+	margin: 0;
+	padding: 0;
+	margin-left: 4px;
+	color: #FFFFFF;
+	overflow: hidden;
+}
+
+.menulink {
+	color: #FFFFFF;
+	font-family: Arial, Sans-serif;
+	display: block;
+	float: left;
+	width: 156px;
+	margin-left: 1px;
+	text-align: center;
+	background-color: #8080FF;
+
+}
+
+.menulink:hover {
+	background-color: #9090FF;
+}
+
 .box {
 	width: 200px;
 	height: 150px;
 	border-width: 1px;
 	border-style: solid;
 	border-color: #8080FF;
-	/*text-align: justify;*/ /*Uncomment this for equal margins*/
 
 	float: left;
 	margin: 5px;

@@ -104,7 +104,8 @@
 			$makeThreads = "CREATE TABLE  `miForum`.`threads` (
 					`threadID` INT( 10 ) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
 					`name` VARCHAR( 30 ) NOT NULL ,
-					`foraID` INT NOT NULL ,
+					`foraID` INT( 10 ) NOT NULL ,
+					`userID` INT( 10 ) NOT NULL ,
 					`description` TEXT NOT NULL
 					) ENGINE = INNODB;";
 			mysql_query($makeThreads) or die(mysql_error());
