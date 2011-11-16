@@ -18,8 +18,10 @@
 
 	while($row = mysql_fetch_array($result)) {
 		echo '<h2>'.$row['title'].'</h2>';
+		echo '<script type="text/javascript" src="google-code-prettify/src/prettify.js"></script>';
 		echo '<script type="text/javascript" src="text_edit.js"></script>';
 		echo '<script type="text/javascript">';
+		echo 'window.onload = function () {prettyPrint(); };';
 		echo 'var textToWrite = "'.mysql_real_escape_string($row['text']).'";';
 		echo 'textToWrite = view_text(textToWrite);';
 		echo 'document.write(textToWrite);';
