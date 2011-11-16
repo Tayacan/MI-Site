@@ -131,6 +131,24 @@
         	} else {
 			// Code for checking columns of table.
 		}
+		$checkArticles = "SELECT * FROM articles;";
+		$result = mysql_query($checkArticles);
+		echo 'Checking table articles<br />';
+		if(!$result) {
+			echo 'Creating table articles.<br />';
+			$makeArticles = "	CREATE TABLE  `miForum`.`articles` (
+					`articleID` INT( 10 ) NOT NULL AUTO_INCREMENT ,
+					`title` VARCHAR( 30 ) NOT NULL ,
+					`text` LONGTEXT NOT NULL ,
+					`writerID` INT( 10 ) NOT NULL ,
+					INDEX (  `articleID` )
+					) ENGINE = INNODB;";
+			mysql_query($makeArticles) or die(mysql_error());
+			echo 'Created table articles<br />';
+                
+        	} else {
+			// Code for checking columns of table.
+		}
 		// Create mi-site user.
 		$checkUser = "SELECT user FROM mysql.user WHERE user='misite'";
 		if(mysql_num_rows(mysql_query($checkUser)) < 1) {
