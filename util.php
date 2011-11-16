@@ -12,7 +12,7 @@
                 echo "<p>".$text."</p>";
                 echo "</div>";
                 echo "</a>";
-
+		return true;
         }
 
 	function top($title = 'MI-Site', $cssdir = '') {
