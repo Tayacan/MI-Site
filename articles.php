@@ -10,18 +10,16 @@
 
 	$result = mysql_query($get_articles) or die(mysql_error());
 
+	echo "<div style='margin-left:5px;margin-right:5px;'>";
+
+	echo "<h2>Articles</h2>";
 
 	while($row = mysql_fetch_array($result)) {
+		echo "<a href='viewArticle.php?id=".$row['articleID']."'>";
 		echo $row["title"]."<br />" ;
-?>
-
-<script type="text/javascript">
-	var textToWrite = "<?php echo $row['text']; ?>";
-	textToWrite = view_text(textToWrite);
-	document.write("hey");
-</script>
-<?php
+		echo "</a>";
 	}
+	echo "</div>";
 
 	bottom();
 ?>

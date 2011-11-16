@@ -6,6 +6,7 @@
 
 <script type="text/javascript" src="text_edit.js"></script>
 <form action="createArticle.php" method="post" >
+<label>Titel: </label><input type="text" name="title" />
 <?php
 	text_editor();
 ?>

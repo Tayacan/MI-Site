@@ -32,7 +32,7 @@
 	function menu() {
 		$mainPages = array(	'Forside' => 'index.php', 
 					'Forum' => 'forum.php',
-					'Artikler' => '#',
+					'Artikler' => 'articles.php',
 					'Om MI' => '#');
 
 		echo "<div class='menu'>";

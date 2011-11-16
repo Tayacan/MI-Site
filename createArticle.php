@@ -8,7 +8,8 @@
 
 	require('connect.php');
 
-	$query = "INSERT INTO articles (title,text,writerID) VALUES ('test_title','".mysql_real_escape_string($_POST['written_text'])."',0)";
+	$query = "	INSERT INTO articles (title,text,writerID) 
+			VALUES ('".mysql_real_escape_string($_POST['title'])."','".mysql_real_escape_string($_POST['written_text'])."',0)";
 	echo $query;
 
 	if (mysql_query($query)) {
