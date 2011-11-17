@@ -9,7 +9,7 @@
 
 	top();
 
-	echo "<div style='margin-left: 5px; margin-right: 5px;'>";
+	echo "<div style='margin-left: 5px; margin-right: 5px;margin-bottom: 20px;'>";
 
 	$id = mysql_real_escape_string($_GET['id']);
 	$query = "SELECT * FROM articles WHERE articleID = ".$id.";";

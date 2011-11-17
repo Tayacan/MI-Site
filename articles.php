@@ -20,7 +20,7 @@
 		echo "</a>";
 	}
 
-	echo "<a href='writeArticle.php'>Write new article</a>";
+	echo "<br /><a href='writeArticle.php'><u>Write new article</u></a>";
 	echo "</div>";
 
 	bottom();
