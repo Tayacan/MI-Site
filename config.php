@@ -28,7 +28,7 @@
 			$makeUsers = "	CREATE TABLE  `miForum`.`users` (
 					`userID` INT( 10 ) NOT NULL AUTO_INCREMENT ,
 					`user` VARCHAR( 15 ) NOT NULL ,
-					`password` VARCHAR( 20 ) NOT NULL ,
+					`password` VARCHAR( 50 ) NOT NULL ,
 					`firstname` VARCHAR( 30 ) NOT NULL ,
 					`lastname` VARCHAR( 30 ) NOT NULL ,
 					`email` VARCHAR( 30 ) NOT NULL ,

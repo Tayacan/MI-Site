@@ -1,19 +1,19 @@
 <?php
-        function make_box($header,$text,$url) {
+    function make_box($header,$text,$url) {
 		/*
 			Creates a pretty link-box with a header and some 
 			content - you can put whatever you want in the 
 			content, as long as it's no larger than 200x150 px.
 		*/
-
-                echo "<a href='".$url."'>";
-                echo "<div class='box'>";
-                echo "<h3><span>".$header."</span></h3>";
-                echo "<p>".$text."</p>";
-                echo "</div>";
-                echo "</a>";
+		
+		echo "<a href='".$url."'>";
+		echo "<div class='box'>";
+		echo "<h3><span>".$header."</span></h3>";
+		echo "<p>".$text."</p>";
+		echo "</div>";
+        echo "</a>";
 		return true;
-        }
+	}
 
 	function top($title = 'MI-Site', $cssdir = '') {
 		/*
