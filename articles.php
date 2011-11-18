@@ -19,6 +19,8 @@
 		echo $row["title"]."<br />" ;
 		echo "</a>";
 	}
+
+	echo "<br /><a href='writeArticle.php'><u>Write new article</u></a>";
 	echo "</div>";
 
 	bottom();

@@ -10,9 +10,14 @@ function view_text (text) {
 	*/
 	text = text.replace(/\\\[/gi,"&#91");
 	text = text.replace(/\\\]/gi,"&#93");
-	
+
+	// Remove newlines
+	text = text.replace(/\[code\]\r\n/gi, "[code]");
+	text = text.replace(/\[code\]\n/gi, "[code]");
+
 	// Exchange newlines for <br />
 	text = text.replace(/\n/gi, "<br />");
+	text = text.replace(/\r/gi, ""); // Kill the carriage returns!
 	
 	// Basic BBCodes.
 	text = text.replace(/\[b\]/gi, "<b>");
@@ -29,6 +34,7 @@ function view_text (text) {
 	text = text.replace(/\[\/code\]/gi, "</pre>");
 	text = text.replace(/\<pre class=\'prettyprint linenums\:1\'\>\<br \/\>/gi, "<pre class='prettyprint linenums:1'>"); // Remove extra newline at start of code block.
 	text = text.replace(/\<\/pre\>\<br \/\>/gi, "</pre>"); // Remove extra newline after code block.
+	text = text.replace(/\<br \/\>\<\/pre\>/gi, "</pre>");
 	
 	// Smileys :D
 	text = text.replace(/\[\:\)\]/gi, "<img src='icons/happy.png' class='smiley' />");
