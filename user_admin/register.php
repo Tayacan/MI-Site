@@ -2,7 +2,7 @@
 	require('../util.php');
 	top('Register new user', '../');
 
-	if($_GET['error'] == 1) {
+	if(!empty($_GET['error']) && $_GET['error'] == 1) {
 		echo "<span style='color:red;'>Please fill out all fields.</span><br /><br />";
 	}
 ?>

@@ -48,7 +48,7 @@
 		/*
 			Ends tags - will later be used for a footer.
 		*/
-		if($conn) mysql_close($conn);
+		if(isset($conn)) mysql_close($conn);
 
 		echo "</div>";
 		echo "</body>";
