@@ -1,0 +1,13 @@
+Register:
+Hvorfor håndteres error==2 og error==3 ikke?
+
+Brugernavn: oversæt '&' til '&amp' mv (http://www.php.net/manual/en/function.htmlspecialchars.php)
+
+Database indeks:
+userID skal fjernes! (samme som PRIMARY, bortset fra at den ikke virker!)
+user skal ikke være unikt for user AND email! (Giver mulighed for to med samme brugernavn, men forskellig mail!)
+
+email mm: Større? 255?
+
+Mere sigende errors i login og register? (Ellers: $_SESSION håndtere errors?)'
+Error-udseende i CSS'en!
