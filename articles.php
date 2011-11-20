@@ -2,6 +2,7 @@
 
 <script type="text/javascript" src="text_edit.js"></script>
 <?php
+	session_start();
 	require_once('connect.php');
 	require_once('util.php');
 	top();
@@ -12,7 +13,7 @@
 
 	echo "<div style='margin-left:5px;margin-right:5px;'>";
 
-	echo "<h2>Articles</h2>";
+	echo "<h2>Artikler</h2>";
 
 	while($row = mysql_fetch_array($result)) {
 		echo "<a href='viewArticle.php?id=".$row['articleID']."'>";
@@ -20,8 +21,13 @@
 		echo "</a>";
 	}
 
-	echo "<br /><a href='writeArticle.php'><u>Write new article</u></a>";
+	if(isset($_SESSION['LoggedIn'])) {
+		echo "<br /><a href='writeArticle.php'><u>Skriv ny artikel</u></a>";
+	} else {
+		echo "<br /><a href='user_admin/login.php'>Log in for at skrive en artikel</a>";
+	}
 	echo "</div>";
+	
 
 	bottom();
 ?>

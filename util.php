@@ -23,13 +23,13 @@
 		$dir = $cssdir.'stylesheet.css';
 		echo "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.1//EN' 'http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd'>";
 
-		echo "<html xmlns='http://www.w3.org/1999/xhtml'><head><meta http-equiv='Content-Type' content='text/html; charset=utf-8' /><title>".$title."</title><link rel='stylesheet' type='text/css' href='".$dir."' /><link rel='stylesheet' type='text/css' href='".$cssdir."style.css' /><link href=".$cssdir."'google-code-prettify/src/prettify.css' type='text/css' rel='stylesheet' /></head><body><div class='content'>";
+		echo "<html xmlns='http://www.w3.org/1999/xhtml'><head><meta http-equiv='Content-Type' content='text/html; charset=utf-8' /><title>".$title."</title><link rel='stylesheet' type='text/css' href='".$dir."' /><link rel='stylesheet' type='text/css' href='".$cssdir."style.css' /><link href='".$cssdir."google-code-prettify/src/prettify.css' type='text/css' rel='stylesheet' /></head><body><div class='content'>";
 		echo "<div style='margin: 5px;'><h1>Replace this with MI logo</h1></div>";
-		menu();
+		menu($cssdir);
 
 	}
 
-	function menu() {
+	function menu($cssdir = '') {
 		$mainPages = array(	'Forside' => 'index.php', 
 					'Forum' => 'forum.php',
 					'Artikler' => 'articles.php',
@@ -38,7 +38,7 @@
 		echo "<div class='menu'>";
 
 		foreach ($mainPages as $name => $page) {
-			echo "<a class='menulink' href='".$page."'>".$name."</a>";
+			echo "<a class='menulink' href='".$cssdir.$page."'>".$name."</a>";
 		}
 
 		echo "</div>";
