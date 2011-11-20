@@ -1,8 +1,6 @@
 <?php //this is the php datebase code
-$forbindelse=mysql_connect("localhost","root","");
-mysql_select_db("miForum");
-?>
-<?php require_once("util.php");//thus is the html top
+	require_once("util.php");//thus is the html top
+	require_once('connect.php');
 	top();
 ?>
 <h1> Admin menu </h1>
