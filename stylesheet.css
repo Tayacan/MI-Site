@@ -59,6 +59,10 @@ div.content {
 	margin-top: 0;
 }
 
+.box_link {
+	text-decoration: none;
+}
+
 .box h3 span {
 	margin-left: 5px;
 	margin-right: 5px;

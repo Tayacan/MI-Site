@@ -6,7 +6,7 @@
 			content, as long as it's no larger than 200x150 px.
 		*/
 		
-		echo "<a href='".$url."'>";
+		echo "<a class='box_link' href='".$url."'>";
 		echo "<div class='box'>";
 		echo "<h3><span>".$header."</span></h3>";
 		echo "<p>".$text."</p>";
@@ -33,7 +33,7 @@
 		$mainPages = array(	'Forside' => 'index.php', 
 					'Forum' => 'forum.php',
 					'Artikler' => 'articles.php',
-					'Om MI' => '#');
+					'Login' => 'user_admin/login.php');
 
 		echo "<div class='menu'>";
 
