@@ -8,7 +8,7 @@
 		header('Location: register.php?error=2');
 	}
 
-	if($conn = mysql_connect('localhost','root','tayacan')) {
+	if($conn = mysql_connect('localhost','misite','kummefryser')) {
 		mysql_select_db('miForum') or die(mysql_error());
 
 		// Sanitize input
@@ -30,7 +30,7 @@
 ?>
 
 <?php
-	require('../util.php');
+	require_once('../util.php');
 	top('','../');
 	if(mysql_query($newUser)) {
 		echo "User created.";

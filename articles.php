@@ -2,8 +2,8 @@
 
 <script type="text/javascript" src="text_edit.js"></script>
 <?php
-	require('connect.php');
-	require('util.php');
+	require_once('connect.php');
+	require_once('util.php');
 	top();
 
 	$get_articles = "SELECT * FROM `articles`";
