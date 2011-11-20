@@ -53,10 +53,11 @@ div.content {
 	margin-right: 5px;
 }
 
-.box h3 {
+h3 {
 	background-color: #8080FF;
 	color: #FFFFFF;
 	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .box_link {
