@@ -30,10 +30,22 @@
 	}
 
 	function menu($cssdir = '') {
+	
+		session_start();
+	
+		$loginT = 'Login';
+		$loginL = 'user_admin/login.php';
+		$redirect = $_SERVER['SCRIPT_NAME'];
+
+		if(isset($_SESSION['LoggedIn'])) {
+			$loginT = 'Log out';
+			$loginL = 'user_admin/logout.php?redirect='.$redirect;
+		}
+
 		$mainPages = array(	'Forside' => 'index.php', 
 					'Forum' => 'forum.php',
 					'Artikler' => 'articles.php',
-					'Login' => 'user_admin/login.php');
+					$loginT => $loginL);
 
 		echo "<div class='menu'>";
 
