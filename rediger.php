@@ -17,7 +17,7 @@
 		echo '<h3><a href="redcat.php?categoryid='.$row["categoryID"].'">';
 		echo $row["categoryName"];
 		echo '</a>';
-		echo'<a href="sletcat.php?categoryid='.$row["categoryID"].'">Slet</a></h3>';
+		echo'<span style="float:right; margin-right:5px;"><a href="sletcat.php?categoryid='.$row["categoryID"].'">Slet</a></span></h3>';
 		echo'<br/>';
 	}
 ?>

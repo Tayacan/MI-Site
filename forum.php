@@ -7,8 +7,8 @@
 <p>
 	<a href="opretcat.php">Opret kategori<a/><br/>
 	<a href="rediger.php">Rediger i kategori<a/><br/>
-	
 </p>
+
 <div class='kategori'>
 
 </div>
