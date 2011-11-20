@@ -1,6 +1,7 @@
 <?php
-	require('connect.php');
-	require('util.php');
+	require_once('connect.php');
+	require_once('util.php');
+	require_once('auth.php');
 	top();
 ?>
 

@@ -3,7 +3,7 @@
 	top("","../");
 	
 	//Checks if loginBackend has noticed any errors, if it has, it gives a fitting errormessage
-	if(isset($_GET['error']){
+	if(isset($_GET['error'])){
 		switch($_GET['error']){
 		
 			case 1:
@@ -28,16 +28,18 @@
 
 <!-- Loginform with button and everything ^^ -->	
 <form action="loginBackend.php" method="post">
-	Brugernavn:
+	Brugernavn:<br />
 	<input type="text" name="username" />
 	<br />
 
-	Password:
+	Password:<br />
 	<input type="password" name="password" />
 	<br />
 
-	<input type="Submit" value="login" />
+	<input type="Submit" value="Login" />
 </form>
+
+Ingen bruger endnu? <a href="register.php">Registrer dig her!</a>
 
 <?php
 	bottom();
