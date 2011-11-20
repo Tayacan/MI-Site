@@ -2,7 +2,7 @@
 
 <script type="text/javascript" src="text_edit.js"></script>
 <?php
-	session_start();
+//	session_start();
 	require_once('connect.php');
 	require_once('util.php');
 	top();

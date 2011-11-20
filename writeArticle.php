@@ -3,6 +3,12 @@
 	require_once('util.php');
 	require_once('auth.php');
 	top();
+
+	if(isset($_GET['error'])) { // Error handling
+		if($_GET['error'] == 1) {
+			echo "<span style='color:red;'>Du har ikke skrevet noget.</span><br /><br />";
+		}
+	}
 ?>
 
 <script type="text/javascript" src="text_edit.js"></script>

@@ -24,7 +24,7 @@
 			$authorName = $writer['firstname'] . ' ' . $writer['lastname'];
 		}
 		echo '<h2>'.$row['title'].'</h2>';
-		echo '<i>by '.$authorName.'</i><br /><br />';
+		echo '<i>af '.$authorName.'</i><br /><br />';
 		echo '<script type="text/javascript" src="google-code-prettify/src/prettify.js"></script>';
 		echo '<script type="text/javascript" src="text_edit.js"></script>';
 		echo '<script type="text/javascript">';
