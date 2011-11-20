@@ -16,9 +16,9 @@
 	echo "<h2>Artikler</h2>";
 
 	while($row = mysql_fetch_array($result)) {
-		echo "<a href='viewArticle.php?id=".$row['articleID']."'>";
+		echo "<h3><a href='viewArticle.php?id=".$row['articleID']."'>";
 		echo $row["title"]."<br />" ;
-		echo "</a>";
+		echo "</a></h3><br />";
 	}
 
 	if(isset($_SESSION['LoggedIn'])) {
