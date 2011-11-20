@@ -4,6 +4,13 @@ body {
 	font-family: Georgia, serif;
 	background-color: #F0F0FF;
 }
+div.fora {
+	width: 156px;
+	height: 20px;
+	margin-left: 10px;
+	margin-right: 5px;
+}
+
 
 div.content {
 	width: 640px;
