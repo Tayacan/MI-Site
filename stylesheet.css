@@ -4,6 +4,7 @@ body {
 	font-family: Georgia, serif;
 	background-color: #F0F0FF;
 }
+
 div.fora {
 	width: 156px;
 	height: 20px;
@@ -11,6 +12,13 @@ div.fora {
 	margin-right: 5px;
 }
 
+div.kategori {
+	width:auto;//628px
+	height: 20px;
+	background-color: #000000;
+	margin-left: 5px;
+	margin-right: 8px;
+}
 
 div.content {
 	width: 640px;
