@@ -60,6 +60,11 @@ h3 {
 	margin-bottom: 0;
 }
 
+h3 a {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
 .box_link {
 	text-decoration: none;
 }
