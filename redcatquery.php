@@ -11,6 +11,6 @@ if(isset($_POST["categoryid"])){
 else{
 	echo "hej";
 }
-echo "<a href='rediger.php'>tilbage</a>";
+echo "<a href='forum.php'>tilbage</a>";
 bottom();//this is the html bottom
 ?>

@@ -1,14 +1,14 @@
-<?php require("util.php");//thus is the html top
- top();
-?>
-<div class='sletforum'>
-</div>
 <?php
-$id=$_REQUEST["id"];
-$sql=DELETE FROM fora WHERE id=".$id.";";
+require_once("util.php");//thus is the html top
+require_once('connect.php');
+top();
 
-mysql_query($sql);
-header("Location:index.php");
-?>
-<?php bottom();//this is the html bottom
+$catID = $_GET['catID'];
+$id =$_GET["foraid"];
+$sql = "DELETE FROM fora WHERE foraID = ".$id.";";
+mysql_query($sql) or die(mysql_error());
+echo $sql;
+echo "<a href='redcat.php?categoryid=".$catID."''>tilbage</a>";
+
+bottom();//this is the html bottom
 ?>

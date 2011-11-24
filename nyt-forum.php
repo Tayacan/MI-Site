@@ -2,20 +2,29 @@
  require_once("util.php");//thus is the html top
  require_once('connect.php');
  top();
-?>
-<div class='opretforum'>
-</div>
-<?php
-$name=$_REQUEST["name"];
-$description=$_REQUEST["description"];
-//her skal der være noget med CategoryID
+ 
+$id =$_POST["catID"];//PROBLEM HER
+$overskrift=$_POST["overskrift"];
+$description=$_POST["description"];
 
-$sql="INSERT INTO fora (name, description)
-	VALUES ('".$name."','".$description."');";
-echo($sql);
-mysql_query($sql);
+$chekfora = 'SELECT name FROM fora WHERE name = "'.$overskrift.'";';//tjekker om kategorien er blevet oprette før
+$checkname = mysql_query($chekfora) or die(mysql_error());
+if(mysql_num_rows($checkname) >0){
+	header('Location: redigerfora.php?error=1');
+}
+$sql="INSERT INTO fora (name, description, categoryID)
+	VALUES ('".$overskrift."','".$description."','".$id."');";
+	echo($sql);
+	mysql_query($sql);
+	echo "<a href='redcat.php?categoryid=".$id."'>tilbage</a>";
 
-header("Location:index.php");
-?>
-<?php bottom();//this is the html bottom
+// echo "<a href='forum.php'>tilbage</a>"; 
+// $name=$_POST["name"];
+// $description=$_POST["description"];
+// $catID=$_POST['catID'];
+// //her skal der være noget med CategoryID
+
+
+
+bottom();//this is the html bottom
 ?>

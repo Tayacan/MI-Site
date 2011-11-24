@@ -10,10 +10,10 @@
 		<input type="text" name="overskrift" size="80"/>
 		<br/>
 		<span class="label">beskrivelse:</span>
-		<textarea cols="60" rows="10" name="beskrivelse"></textarea>
+		<textarea cols="100" rows="10" name="beskrivelse"></textarea>
 </P>
 <p>
-	<input type="Submit" value="opret indlæg"/>
+	<input type="Submit" value="opret kategori"/>
 </P>
 </form>
 

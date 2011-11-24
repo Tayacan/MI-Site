@@ -2,9 +2,7 @@
 	require_once("util.php");//thus is the html top
 	require_once('connect.php');
 	top();
-?>
-<?php //Her bliver en ny kategori oprettet i databasen, hvis ikke den er oprettet før
-
+//Her bliver en ny kategori oprettet i databasen, hvis ikke den er oprettet før
 $overskrift=$_POST["overskrift"];
 $beskrivelse=$_POST["beskrivelse"];
 
@@ -17,7 +15,8 @@ $sql="INSERT INTO categories(categoryName,description)
 	VALUES('".$overskrift."','".$beskrivelse."');";
 mysql_query($sql);
 echo($sql);
-?>
-<a href="forum.php">tilbage</a>
-<?php bottom();//this is the html bottom
+
+echo "<a href='forum.php'>tilbage</a>";
+
+bottom();//this is the html bottom
 ?>

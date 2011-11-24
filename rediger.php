@@ -4,11 +4,10 @@
 	top();
 	if(!empty($_GET['error'])){
 		if($_GET['error']==1){
-			echo "<span style='color: red;'>Katogorien er allerede oprettet</span>";
+			echo "<span style='color: red;'>En katogori af samme navn er allerede oprettet</span>";
 		}
 	}
 ?>
-<h1>rediger</h1>
 <p>vælg hvilket indlæg du vil redigerer</p>
 <p>
 <?php
