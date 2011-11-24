@@ -31,7 +31,7 @@
 
 	function menu($cssdir = '') {
 	
-		session_start();
+		@session_start();
 	
 		$loginT = 'Login';
 		$loginL = 'user_admin/login.php';

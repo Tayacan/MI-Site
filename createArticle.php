@@ -9,6 +9,7 @@
 	// Nothing was written, go back to the writeArticle page.
 	if(!$_POST['written_text']) {
 		header('Location: writeArticle.php?error=1');
+		exit;
 	}
 
 	$query = "	INSERT INTO articles (title,text,writerID) 
