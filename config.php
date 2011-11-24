@@ -32,6 +32,7 @@
 					`firstname` VARCHAR( 30 ) NOT NULL ,
 					`lastname` VARCHAR( 30 ) NOT NULL ,
 					`email` VARCHAR( 30 ) NOT NULL ,
+					`isAdmin` TINYINT( 1 ) NOT NULL DEFAULT '0' ,
 					PRIMARY KEY (  `userID` ) ,
 					INDEX (  `userID` ) ,
 					UNIQUE (
