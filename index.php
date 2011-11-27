@@ -30,13 +30,13 @@
 			hej2
 		</div>
 	</div>
-	<div class="box" style="width: 625px; height: 250px;">
+	<div class="box" style="width: 625px; height: 150px;">
 		<h3>Seneste artikler</h3>
 		<a href="viewArticle.php?id=<?php echo $latestArticle['articleID']; ?>" style="text-decoration: none; color: black;">
-		<div style="width:55%;height:80%;float:left;text-align:justify;">
+		<div style="width:55%;height:118px;float:left;text-align:justify;border-right: 1px solid #8080FF;padding:5px;">
 			<?php
 				if($latestArticle !== null) {
-					echo "<h2>".$latestArticle['title']."</h2>";
+					echo "<h2 style='margin: 0;'><u>".$latestArticle['title']."</u></h2>";
 					$stringToPrint = $latestArticle['text'];
 					$stringToPrint = substr($stringToPrint, 0, 200)."...";
 
@@ -51,6 +51,13 @@
 				}
 			?>
 		</div></a>
+		<div style="position: relative; margin-left: 360px; margin-top: 10px;">
+			<?php
+				echo '<a class="boxlink" href="viewArticle.php?id='.$arts[0]['articleID'].'">'.$arts[0]['title'] . '</a><br />';
+				echo '<a class="boxlink" href="viewArticle.php?id='.$arts[1]['articleID'].'">'.$arts[1]['title'] . '</a><br />';
+				echo '<a class="boxlink" href="viewArticle.php?id='.$arts[2]['articleID'].'">'.$arts[2]['title'] . '</a><br />';
+			?>
+		</div>
 	</div>
 
 </div>
