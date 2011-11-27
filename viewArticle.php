@@ -17,7 +17,14 @@
 	$result = mysql_query($query) or die(mysql_error());
 
 	while($row = mysql_fetch_array($result)) {
+		$authorName = 'Unknown';
+		$getAuthor = "SELECT firstname, lastname FROM users WHERE userID = '".$row['writerID']."';";
+		$writerResult = mysql_query($getAuthor) or die(mysql_error());
+		while($writer = mysql_fetch_array($writerResult)) {
+			$authorName = $writer['firstname'] . ' ' . $writer['lastname'];
+		}
 		echo '<h2>'.$row['title'].'</h2>';
+		echo '<i>af '.$authorName.'</i><br /><br />';
 		echo '<script type="text/javascript" src="google-code-prettify/src/prettify.js"></script>';
 		echo '<script type="text/javascript" src="text_edit.js"></script>';
 		echo '<script type="text/javascript">';

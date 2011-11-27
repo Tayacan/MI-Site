@@ -5,6 +5,21 @@ body {
 	background-color: #F0F0FF;
 }
 
+div.fora {
+	width: 156px;
+	height: 20px;
+	margin-left: 10px;
+	margin-right: 5px;
+}
+
+div.kategori {
+	width:auto;//628px
+	height: 20px;
+	background-color: #000000;
+	margin-left: 5px;
+	margin-right: 8px;
+}
+
 div.content {
 	width: 640px;
 	margin-left: auto;
@@ -29,6 +44,7 @@ div.content {
 	margin-left: 1px;
 	text-align: center;
 	background-color: #8080FF;
+	text-decoration: none;
 
 }
 
@@ -52,10 +68,20 @@ div.content {
 	margin-right: 5px;
 }
 
-.box h3 {
+h3 {
 	background-color: #8080FF;
 	color: #FFFFFF;
 	margin-top: 0;
+	margin-bottom: 0;
+}
+
+h3 a {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+.box_link {
+	text-decoration: none;
 }
 
 .box h3 span {
@@ -63,7 +89,7 @@ div.content {
 	margin-right: 5px;
 }
 
-a {
+/*a {
 	text-decoration: none;
 	color: #000000;
-}
+}*/
