@@ -4,11 +4,7 @@
 ?>
 
 <div>
-
-<?php
-	echo "Index file <br />";
-	require('file_viewer.php'); // See all files in current directory.
-?>
+Ting
 </div>
 <?php
 	bottom();
