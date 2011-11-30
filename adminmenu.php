@@ -6,6 +6,20 @@
 	top();
 	$admincheck = 'SELECT isAdmin FROM users WHERE userID = "'.@$_SESSION['LoggedIn'].'";';
 	$isadmin = mysql_query($admincheck) or die(mysql_error());
+?>	
+<!-- Funktion det beder om godkendelse, før den sletter en besked... -->
+<script type="text/javascript">
+	<!--
+	function confirmation(id) {
+		var answer = confirm("Vil du slette denne kategori?")
+		if (answer){
+			window.location.href = "sletcat.php?categoryid="+id;
+		}
+	}
+	//-->
+</script>	
+
+<?php	
 	while($row = mysql_fetch_array($isadmin)){
 		if($row['isAdmin']==1){
 ?>
@@ -28,7 +42,7 @@
 		echo '<h3><a href="redcat.php?categoryid='.$row["categoryID"].'">';
 		echo $row["categoryName"];
 		echo '</a>';
-		echo'<span style="float:right; margin-right:5px;"><a href="sletcat.php?categoryid='.$row["categoryID"].'">Slet</a></span></h3>';
+		echo'<span style="float:right; margin-right:5px;" onclick="confirmation('.$row["categoryID"].')">Slet</span></h3>';
 		echo'<br/>';
 	}
 ?>
