@@ -36,10 +36,10 @@
 		<div style="width:55%;height:118px;float:left;text-align:justify;border-right: 1px solid #8080FF;padding:5px;">
 			<?php
 				if($latestArticle !== null) {
-					$pattern = "/\[code\](.)*\[\/code\]/";
 					echo "<h2 style='margin: 0;'><u>".$latestArticle['title']."</u></h2>";
 					$stringToPrint = $latestArticle['text'];
-					$stringToPrint = preg_replace($pattern, " ", $stringToPrint);
+					$stringToPrint = preg_replace("/\[code\]/", "", $stringToPrint);
+					$stringToPrint = preg_replace("/\[\/code\]/", "", $stringToPrint);
 					$stringToPrint = preg_replace("/\\n/", " ", $stringToPrint);
 					$stringToPrint = substr($stringToPrint, 0, 200)."...";
 					//$stringToPrint = preg_match($pattern, $stringToPrint);

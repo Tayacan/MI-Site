@@ -33,6 +33,13 @@
 		echo 'textToWrite = view_text(textToWrite);';
 		echo 'document.write(textToWrite);';
 		echo '</script>';
+
+		if(isset($_SESSION['LoggedIn'])) {
+			if($_SESSION['LoggedIn'] == $row['writerID']) {
+				echo "<br /><br /><span style='float: right;'><a href='editArticle.php?id=".$row['articleID']."'>Rediger</a> 
+					<a href='deleteArticle.php?id=".$row['articleID']."'>Slet</a></span><br />";
+			}
+		}
 	}
 
 	echo "</div>";
