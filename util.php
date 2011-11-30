@@ -80,7 +80,7 @@
 		echo "</html>";
 	}
 	
-	function text_editor (@$prevTextForEditor) { // Parameter is optional - will be shown in the textarea.
+	function text_editor ($prevTextForEditor="") { // Parameter is optional - will be shown in the textarea.
 		include('text_editor.php');
 	}
 ?>
