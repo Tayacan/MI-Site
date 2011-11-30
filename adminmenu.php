@@ -42,7 +42,7 @@
 		echo '<h3><a href="redcat.php?categoryid='.$row["categoryID"].'">';
 		echo $row["categoryName"];
 		echo '</a>';
-		echo'<span style="float:right; margin-right:5px;" onclick="confirmation('.$row["categoryID"].')">Slet</span></h3>';
+		echo'<span style="float:right; margin-right:5px; cursor:pointer;" onclick="confirmation('.$row["categoryID"].')">Slet</span></h3>';
 		echo'<br/>';
 	}
 ?>
