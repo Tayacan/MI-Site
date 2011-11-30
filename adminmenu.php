@@ -22,7 +22,7 @@
 ?>
 <p>
 <?php
-	echo "vælg hvilket indlæg du vil redigerer";
+	echo "vælg hvilket kategori du vil redigerer";
 	$resultat = mysql_query("SELECT categoryName,categoryID FROM categories ORDER BY categoryID DESC;") or die(mysql_error());//sorterer alle kategorier der er oprettet efter id
 	while($row=mysql_fetch_array($resultat)){
 		echo '<h3><a href="redcat.php?categoryid='.$row["categoryID"].'">';

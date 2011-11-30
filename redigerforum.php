@@ -27,7 +27,7 @@ require_once('auth.php');
 	<textarea cols="60" rows="10" name="beskrivelse"><?php echo $redtekst;?></textarea>
 </P>
 <p>
-	<input type="Submit" value="knap2"/>
+	<input type="Submit" value="Gem ændringer"/>
 </P>
 </form>
 <?php
