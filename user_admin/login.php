@@ -3,7 +3,7 @@
 	top("","../");
 	
 	//Checks if loginBackend has noticed any errors, if it has, it gives a fitting errormessage
-	if(isset($_GET['error']){
+	if(isset($_GET['error'])){
 		switch($_GET['error']){
 		
 			case 1:
