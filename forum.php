@@ -14,6 +14,7 @@
 		// echo'<span style="float:right; margin-right:5px;"><a href="sletcat.php?categoryid='.$row["categoryID"].'">Slet</a></span></h3>';
 		// echo'<br/>';
 	}
+
 	//følgende kode tjekker om man er admin. Hvis man er vises link til adminmenuen
 	$admincheck = 'SELECT isAdmin FROM users WHERE userID = "'.@$_SESSION['LoggedIn'].'";';
 	$isadmin = mysql_query($admincheck) or die(mysql_error());

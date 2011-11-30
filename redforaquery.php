@@ -8,7 +8,6 @@ require_once('auth.php');
 	while($row = mysql_fetch_array($isadmin)){
 		if($row['isAdmin']==1){
 			top();
-			$id =$_POST["foraid"];
 
 			if(isset($_POST["foraid"])){
 				$id =$_POST["foraid"];

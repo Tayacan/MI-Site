@@ -2,7 +2,6 @@
  top();
 ?>
 
-
 <a href="oprettråd.php">Opret tråd<a/><br/>
 
 <a href="redigertråd.php">Rediger tråd<a/><br/>
