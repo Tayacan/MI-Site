@@ -12,6 +12,9 @@
 		}
 	}
 	//
+	
+	
+	
 ?>
 
 <?php bottom();//this is the html bottom
