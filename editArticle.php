@@ -16,7 +16,10 @@
 
 	// Obstacle number two - are you the author?
 	while($row = mysql_fetch_array($res)) {
-		if($row['writerID'] !== $_SESSION['LoggedIn']) {
+		$isAdmQuery = "SELECT isAdmin FROM users WHERE userID = ".$_SESSION['LoggedIn'].";";
+                $isAdm = mysql_query($isAdmQuery) or die(mysql_error());
+                $admRow = mysql_fetch_array($isAdm);
+		if($row['writerID'] !== $_SESSION['LoggedIn'] && $admRow['isAdmin'] != 1) {
 			header('Location: articles.php');
 			exit;
 		}
@@ -30,7 +33,8 @@
 
 	// If we edited stuff and pressed the save button
 	if(isset($_POST['edTitle'])) {
-		$updateQuery = "UPDATE articles SET text='".$_POST['written_text']."', title='".$_POST['edTitle']."' WHERE articleID=".$artID.";";
+		$updateQuery = "UPDATE articles SET text='".mysql_real_escape_string($_POST['written_text'])."', 
+				title='".mysql_real_escape_string($_POST['edTitle'])."' WHERE articleID=".$artID.";";
 		if(mysql_query($updateQuery) or die(mysql_error())) {
 			echo "Artiklen er opdateret. <a href='viewArticle.php?id=".$artID."'>Tilbage</a>";
 		}

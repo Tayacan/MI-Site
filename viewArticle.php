@@ -4,8 +4,8 @@
 		header('Location: articles.php');
 	}
 
-	require('connect.php');
-	require('util.php');
+	require_once('connect.php');
+	require_once('util.php');
 
 	top();
 
@@ -35,7 +35,10 @@
 		echo '</script>';
 
 		if(isset($_SESSION['LoggedIn'])) {
-			if($_SESSION['LoggedIn'] == $row['writerID']) {
+			$isAdmQuery = "SELECT isAdmin FROM users WHERE userID = ".$_SESSION['LoggedIn'].";";
+			$isAdm = mysql_query($isAdmQuery) or die(mysql_error());
+			$admRow = mysql_fetch_array($isAdm);
+			if($_SESSION['LoggedIn'] == $row['writerID'] || $admRow['isAdmin'] == 1) {
 				echo "<br /><br /><span style='float: right;'><a href='editArticle.php?id=".$row['articleID']."'>Rediger</a> 
 					<a href='deleteArticle.php?id=".$row['articleID']."'>Slet</a></span><br />";
 			}
