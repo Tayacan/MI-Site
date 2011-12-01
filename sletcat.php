@@ -9,6 +9,7 @@
 		if($row['isAdmin']==1){
 			top();
 			
+			
 			$id =$_GET["categoryid"];
 			$sql = "DELETE FROM categories WHERE categoryID = ".$id.";";
 			mysql_query($sql) or die(mysql_error());
