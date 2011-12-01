@@ -13,7 +13,7 @@ require_once('auth.php');
 				$id =$_POST["foraid"];
 				$sql="UPDATE fora SET name='".$_POST["overskrift"]."', description='".$_POST["beskrivelse"]."' WHERE foraID=".$id.";";
 				mysql_query($sql) or die(mysql_error());
-				echo "<a href='redigerforum.php'>tilbage</a>";
+				echo "<a href='redigerforum.php?foraid=".$id."'>tilbage</a>";
 				echo($sql);
 			}
 		}

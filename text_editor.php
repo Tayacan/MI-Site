@@ -7,7 +7,9 @@
 	
 		<div id="smiley_buttons" style="float:top; display:block; height:300px; width:680px;">
 			<!-- Text area -->
-			<textarea name ="written_text" class="text_edit" id="my_text" rows="10" cols="30"></textarea>
+			<textarea name ="written_text" class="text_edit" id="my_text" rows="10" cols="30"><?php
+				if(isset($prevTextForEditor)) echo $prevTextForEditor;
+			?></textarea>
 			
 			<!-- Smiley buttons -->
 			<button type="button" onclick="insert_smiley('[:)]')" style="float:left; margin:0;">

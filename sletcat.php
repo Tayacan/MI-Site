@@ -14,7 +14,7 @@
 			$sql = "DELETE FROM categories WHERE categoryID = ".$id.";";
 			mysql_query($sql) or die(mysql_error());
 			echo $sql;
-			echo "<a href='forum.php'>tilbage</a>";
+			echo "<a href='adminmenu.php'>tilbage</a>";
 		}
 	}
 bottom();//this is the html bottom

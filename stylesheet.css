@@ -52,6 +52,16 @@ div.content {
 	background-color: #9090FF;
 }
 
+.boxlink {
+	color: black;
+
+	display: block;
+	width: 95%;
+	height: 100%;
+	float: top;
+	border-bottom: 1px solid #8080FF;
+}
+
 .box {
 	width: 200px;
 	height: 150px;

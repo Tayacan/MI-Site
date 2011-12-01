@@ -14,6 +14,19 @@
         echo "</a>";
 		return true;
 	}
+	function fora_menu($header,$text,$url) {
+		/*
+			description
+		*/
+		
+		echo "<a class='box' href='".$url."'>";
+		echo "<div class='box'>";
+		echo "<h3><span>".$header."</span></h3>";
+		echo "<p>".$text."</p>";
+		echo "</div>";
+        echo "</a>";
+		return true;
+	}
 
 	function top($title = 'MI-Site', $cssdir = '') {
 		/*
@@ -67,7 +80,7 @@
 		echo "</html>";
 	}
 	
-	function text_editor () {
+	function text_editor ($prevTextForEditor="") { // Parameter is optional - will be shown in the textarea.
 		include('text_editor.php');
 	}
 ?>

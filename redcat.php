@@ -26,7 +26,7 @@
 	<textarea cols="60" rows="10" name="beskrivelse"><?php echo $redtekst;?></textarea>
 </P>
 <p>
-	<input type="Submit" value="knap"/>
+	<input type="Submit" value="Rediger"/>
 </P>
 </form>
 <h2>Fora i denne kategori</h2>

@@ -7,7 +7,7 @@
 	require_once('util.php');
 	top();
 
-	$get_articles = "SELECT * FROM `articles`";
+	$get_articles = "SELECT * FROM `articles` ORDER BY articleID DESC";
 
 	$result = mysql_query($get_articles) or die(mysql_error());
 
