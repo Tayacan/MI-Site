@@ -15,7 +15,11 @@
 
         // Obstacle number two - are you the author?
         while($row = mysql_fetch_array($res)) {
-                if($row['writerID'] !== $_SESSION['LoggedIn']) {
+		$isAdmQuery = "SELECT isAdmin FROM users WHERE userID = ".$_SESSION['LoggedIn'].";";
+                $isAdm = mysql_query($isAdmQuery) or die(mysql_error());
+                $admRow = mysql_fetch_array($isAdm);
+
+                if($row['writerID'] !== $_SESSION['LoggedIn'] && $admRow['isAdmin'] != 1) {
                         header('Location: articles.php');
                         exit;
                 }

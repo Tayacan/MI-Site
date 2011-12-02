@@ -7,7 +7,7 @@
 	$userID = $_SESSION['LoggedIn'];
 
 	// Nothing was written, go back to the writeArticle page.
-	if(!$_POST['written_text']) {
+	if(!$_POST['written_text'] || !$_POST['title']) {
 		header('Location: writeArticle.php?error=1');
 		exit;
 	}
