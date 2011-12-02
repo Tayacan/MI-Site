@@ -18,7 +18,6 @@
 		/*
 			description
 		*/
-		
 		echo "<a class='box' href='".$url."'>";
 		echo "<div class='box'>";
 		echo "<h3><span>".$header."</span></h3>";

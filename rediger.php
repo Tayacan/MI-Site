@@ -11,7 +11,7 @@
 			if(!empty($_GET['error'])){
 				if($_GET['error']==1){
 					echo "<span style='color: red;'>En katogori af samme navn er allerede oprettet</span>";
-					echo "<a href='forum.php'>tilbage</a>";
+					echo "<a href='adminmenu.php'>tilbage</a>";
 				}
 			}
 		}

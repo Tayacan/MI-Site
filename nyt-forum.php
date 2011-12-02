@@ -9,7 +9,7 @@ require_once('auth.php');
 		if($row['isAdmin']==1){
 			top();
  
-			$id =$_POST["catID"];//PROBLEM HER
+			$id =$_POST["catID"];
 			$overskrift=$_POST["overskrift"];
 			$description=$_POST["description"];
 
@@ -17,6 +17,7 @@ require_once('auth.php');
 			$checkname = mysql_query($chekfora) or die(mysql_error());
 			if(mysql_num_rows($checkname) >0){
 				header('Location: redigerfora.php?error=1');
+				exit;
 			}
 			$sql="INSERT INTO fora (name, description, categoryID)
 				VALUES ('".$overskrift."','".$description."','".$id."');";

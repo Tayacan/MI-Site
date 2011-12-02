@@ -9,7 +9,8 @@ require_once('auth.php');
 		if($row['isAdmin']==1){
 			top();
 
-			$id =$_GET["foraid"];
+			$id =$_GET['foraid'];
+			$catID =$_GET['catID'];
 			$finder = mysql_query("SELECT * FROM fora WHERE foraID = ".$id.";");
 			 while($row = mysql_fetch_array($finder)){
 				$rednavn = $row['name'];
@@ -19,6 +20,7 @@ require_once('auth.php');
 <h4>Rediger forummets navn eller beskrivelse</h4>
 <form action="redforaquery.php" method="post">
 	<input type="hidden" name="foraid" value="<?php echo $id?>"/>
+	<input type="hidden" name="catID" value="<?php echo $catID?>"/>
 <p>
 	<span class="label">overskrift:</span>
 	<input type="text" name="overskrift" size="80" value="<?php echo $rednavn;?>"/>

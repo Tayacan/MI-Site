@@ -7,7 +7,7 @@
 	
 	$resultat = mysql_query("SELECT categoryName,description,categoryID FROM categories ORDER BY categoryID DESC;") or die(mysql_error());//sorterer alle kategorier der er oprettet efter id
 	while($row=mysql_fetch_array($resultat)){
-		make_box($row['categoryName'],$row['description'],"enside.php?catID=".$row['categoryID']."");
+		make_box($row['categoryName'],$row['description'],"visfora.php?catID=".$row['categoryID']."");
 		//echo '<h3><a href="redcat.php?categoryid='.$row["categoryID"].'">';
 		// echo $row["categoryName"];
 		// echo '</a>';
