@@ -15,6 +15,19 @@
 			$redtekst = $row['description'];
 			}
 ?>
+
+<!-- Funktion det beder om godkendelse, før den sletter en besked... -->
+<script type="text/javascript">
+	<!--
+	function confirmation(foraID, catID) {
+		var answer = confirm("Vil du slette dette forum?")
+		if (answer){
+			window.location.href = "sletforum.php?foraid="+foraID+"&catID="+catID;
+		}
+	}
+	//-->
+</script>
+
 <h4>Rediger kategoriens navn eller beskrivelse</h4>
 <form action="redcatquery.php" method="post">
 	<input type="hidden" name="categoryid" value="<?php echo $id?>"/>
@@ -45,7 +58,7 @@
 				echo '<h3><a href="redigerforum.php?foraid='.$row["foraID"].'">';
 				echo $row["name"];
 				echo '</a>';
-				echo'<span style="float:right; margin-right:5px;"><a href="sletforum.php?foraid='.$row["foraID"].'&catID='.$id.'">Slet</a></span></h3>';
+				echo'<span style="float:right; margin-right:5px; cursor:pointer;" onclick="confirmation('.$row["foraID"].', '.$id.')">Slet</span></h3>';
 				echo'<br/>';
 			}	
 ?>
