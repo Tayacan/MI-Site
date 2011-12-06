@@ -1,5 +1,5 @@
-<?php //this is the php datebase code
-require_once("util.php");//thus is the html top
+<?php
+require_once("util.php");
 require_once('connect.php');
 require_once('auth.php');
 	//admintjek
@@ -9,7 +9,7 @@ require_once('auth.php');
 		if($row['isAdmin']==1){
 			$id =$_POST["catID"];
 			if(!$_POST['overskrift']) {
-				header("Location: redcat.php?error=1&catID=$id");
+				header("Location: opretforum.php?error=1&catID=$id");
 				exit;
 			}
 			top();

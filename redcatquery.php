@@ -1,5 +1,5 @@
-<?php //this is the php datebase code
-	require_once("util.php");//thus is the html top
+<?php 
+	require_once("util.php");
 	require_once('connect.php');
 	require_once('auth.php');
 	
