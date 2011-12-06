@@ -18,10 +18,14 @@
 		/*
 			description
 		*/
-		echo "<a class='box' href='".$url."'>";
-		echo "<div class='box'>";
+		
+		//echo'<span style="float:right; margin-right:5px; cursor:pointer;"</span>';
+		//echo "<a class='line' href='".$url."'>";
+		echo "<a href='".$url."'>";
+		echo "<div class='forabox'>";
 		echo "<h3><span>".$header."</span></h3>";
 		echo "<p>".$text."</p>";
+		echo "</br>";
 		echo "</div>";
         echo "</a>";
 		return true;

@@ -73,6 +73,17 @@ div.content {
 	margin: 5px;
 }
 
+.forabox {
+	width: 624px;
+	height: 100px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #8080FF;
+
+	float: left;
+	margin: 5px;
+}
+
 .box p {
 	margin-left: 5px;
 	margin-right: 5px;

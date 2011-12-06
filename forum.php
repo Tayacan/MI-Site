@@ -2,8 +2,6 @@
 	require_once("util.php");//thus is the html top
 	require_once('connect.php');
 	top();
-	//echo "<a href='oprettraed.php'>Opret tråd</a></br>";
-	//echo "<a href='redigertraed.php'>Rediger tråd</a></br>";
 	
 	$admincheck = 'SELECT isAdmin FROM users WHERE userID = "'.@$_SESSION['LoggedIn'].'";';
 	$isadmin = mysql_query($admincheck) or die(mysql_error());
@@ -16,6 +14,10 @@
 	while($row=mysql_fetch_array($resultat)){
 		make_box($row['categoryName'],$row['description'],"visfora.php?catID=".$row['categoryID']."");
 	}
+	
+		
+	//echo "<a href='oprettraad.php?foraid=".$id."'>opret tråd</a>";
+	//echo "<a href='oprettraad.php'>opret tråd</a>";
 
 ?>
 
