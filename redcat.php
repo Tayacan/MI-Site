@@ -42,7 +42,8 @@
 <!-- som overskriften angiver bliver kan man her ændre i overskrift eller beskrivelse i den valgte kategori-->
 <h4>Rediger kategoriens navn eller beskrivelse</h4>
 <form action="redcatquery.php" method="post">
-	<input type="hidden" name="catID" value="<?php echo $id?>"/>
+	<input type="hidden" name="catID" value="<?php echo $id; ?>"/>
+	<input type="hidden" name="oldname" value="<?php echo $rednavn; ?>" />
 	<p>
 		<span class="label">overskrift:</span>
 		<input type="text" name="overskrift" size="80" value="<?php echo $rednavn;?>"/>
