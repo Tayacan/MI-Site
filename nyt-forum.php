@@ -13,14 +13,16 @@ require_once('auth.php');
 			$overskrift=mysql_real_escape_string($_POST["overskrift"]);// her er der taget højde for beskyttelse mod sql injektion
 			$description=mysql_real_escape_string($_POST["description"]);// -||-
 			
-			// tjekke om et forum med samme navn allerede er oprettet
 			//husk at tjekke om den er tom
+			
+			// Her tjekkes om et forum med samme navn allerede er oprettet
 			$chekfora = 'SELECT name FROM fora WHERE name = "'.$overskrift.'";';
 			$checkname = mysql_query($chekfora) or die(mysql_error());
 			if(mysql_num_rows($checkname) >0){
 				header('Location: opretforum.php?error=1');
 				exit;
 			}
+			// hvis der ingen fejlmeddelelser er, så indsættes data i tabellen
 			$sql="INSERT INTO fora (name, description, categoryID)
 				VALUES ('".$overskrift."','".$description."','".$id."');";
 				echo($sql);
