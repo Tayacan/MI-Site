@@ -155,6 +155,19 @@
 		mysql_query($alterFora) or die(mysql_error());
 		mysql_query($makeRelationForaCat) or die(mysql_error());
 
+		$alterThreads = "ALTER TABLE  `threads` ADD INDEX (  `foraID` )";
+		$makeRelationThreadsFora = "ALTER TABLE  `threads` ADD FOREIGN KEY (  `foraID` ) REFERENCES  `miForum`.`fora` (
+						`foraID`
+						) ON DELETE CASCADE ON UPDATE CASCADE ;";
+		mysql_query($alterThreads) or die(mysql_error());
+		mysql_query($makeRelationThreadsFora) or die(mysql_error());
+
+		$alterPost = "ALTER TABLE  `post` ADD INDEX (  `threadID` )";
+		$makeRelationPostThreads = "ALTER TABLE  `post` ADD FOREIGN KEY (  `threadID` ) REFERENCES  `miForum`.`threads` (
+						`threadID`
+						) ON DELETE CASCADE ON UPDATE CASCADE ;";
+		mysql_query($alterThreads) or die(mysql_error());
+		mysql_query($makeRelationPostThreads) or die(mysql_error());
 	}
 ?>
 
