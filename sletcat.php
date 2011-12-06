@@ -9,6 +9,7 @@
 	while($row = mysql_fetch_array($isadmin)){
 		if($row['isAdmin']==1){
 			top();
+			//her slettes kategorien og alt hvad der hører under den
 			$id =$_GET["categoryid"];
 			$sql = "DELETE FROM categories WHERE categoryID = ".$id.";";
 			mysql_query($sql) or die(mysql_error());

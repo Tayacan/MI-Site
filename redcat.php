@@ -55,7 +55,7 @@
 <h4>Rediger kategoriens navn eller beskrivelse</h4>
 <form action="redcatquery.php" method="post">
 	<input type="hidden" name="catID" value="<?php echo $id; ?>"/>
-	<input type="hidden" name="oldname" value="<?php echo $rednavn; ?>" />
+	<input type="hidden" name="oldname" value="<?php echo $rednavn; ?>" /><!-- For at brugeren kan redigerer i beskrivelsen, skal vi kunne tjekke om det gamle navn ændre sig-->
 	<p>
 		<span class="label">overskrift:</span>
 		<input type="text" name="overskrift" size="80" value="<?php echo $rednavn;?>"/>
@@ -82,7 +82,7 @@
 ?>
 </p>
 <?php 
-			echo "<a href='opretforum.php?catID= ".$id."'>Opret et nyt forum<a/><br/>";
+			echo "<a href='opretforum.php?catID= ".$id."'>Opret et nyt forum<a/><br/>";// her kan et nyt forum oprettes
 		}
 	}
 bottom();

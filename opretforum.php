@@ -3,6 +3,7 @@
 	require_once('connect.php');
 	require_once('auth.php');
 	
+	//admin tjek
 	$admincheck = 'SELECT isAdmin FROM users WHERE userID = "'.@$_SESSION['LoggedIn'].'";';
 	$isadmin = mysql_query($admincheck) or die(mysql_error());
 	while($row = mysql_fetch_array($isadmin)){

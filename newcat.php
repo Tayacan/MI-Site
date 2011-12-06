@@ -20,7 +20,7 @@
 			
 			$chekcat = 'SELECT categoryName FROM categories WHERE categoryName = "'.$overskrift.'";';//tjekker om kategorien er blevet oprette før
 			$checkname = mysql_query($chekcat) or die(mysql_error());
-			if(mysql_num_rows($checkname) >0){ //spørg maya
+			if(mysql_num_rows($checkname) >0){ 
 				header('Location: opretcat.php?error=2');
 				exit;
 			}

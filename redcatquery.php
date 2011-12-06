@@ -17,17 +17,15 @@
 				//her tjekkes om feltet overskrift står tomt og sender fejlbesked 1 hvis det gør, man bliver diregeret tilbaget til redcat hvis det er
 				if(!$_POST['overskrift']) {
 				header("Location: redcat.php?error=1&catID=$id");
-				//&catID='.$id.'
 				exit;
 				}
-				$chekcat = 'SELECT categoryName FROM categories WHERE categoryName = "'.$overskrift.'";';//tjekker om kategorien er blevet oprette før
+				// her søges der efter kategorier af samme navn, men kun hvis man har ændret overskriften, da man gerne må redigerer i beskrivelsen kun
+				$chekcat = 'SELECT categoryName FROM categories WHERE categoryName = "'.$overskrift.'";';
 				$checkname = mysql_query($chekcat) or die(mysql_error());
-				if(mysql_num_rows($checkname) >0 && $overskrift != $_POST['oldname']){
+				if(mysql_num_rows($checkname) >0 && $overskrift != $_POST['oldname']){//variablen vi sendte fra redcat.php, kort sagt, mysql querry finder rækker og num_rows angiver antal rækker
 					header("Location: redcat.php?error=2&catID=$id");
-					//&catID='.$id.'
 					exit;
 				}
-				$id =$_POST["catID"];
 				//her opdateres overskrift og beskrivelse tabellen
 				$sql="UPDATE categories SET categoryName='".$overskrift."', description='".$beskrivelse."' WHERE categoryID=".$id.";";
 				mysql_query($sql) or die(mysql_error());
