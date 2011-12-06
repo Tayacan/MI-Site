@@ -8,12 +8,15 @@ require_once('auth.php');
 	while($row = mysql_fetch_array($isadmin)){
 		if($row['isAdmin']==1){
 			top();
+			$id =$_POST['foraid'];
+			$catID =$_POST['catID'];
 
 			if(isset($_POST["foraid"])){
 				$id =$_POST["foraid"];
 				$sql="UPDATE fora SET name='".$_POST["overskrift"]."', description='".$_POST["beskrivelse"]."' WHERE foraID=".$id.";";
 				mysql_query($sql) or die(mysql_error());
-				echo "<a href='redigerforum.php?foraid=".$id."'>tilbage</a>";
+				echo "<a href='redcat.php?categoryid=".$catID."''>tilbage</a>";
+				
 				echo($sql);
 			}
 		}

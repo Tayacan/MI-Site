@@ -8,10 +8,11 @@
 	while($row = mysql_fetch_array($isadmin)){
 		if($row['isAdmin']==1){
 			top();
+			
 ?>
 <h2>Opret forum</h2>
 <form action="nyt-forum.php" method="post">
-<input type="hidden" name="catID" value="<?php echo $_GET['categoryid'];?>"/>
+<input type="hidden" name="catID" value="<?php echo $_GET['catID'];?>"/>
 	<p>
 		<span class="label">Name</span>
 		<input type="text" name="overskrift"size="100"/>
