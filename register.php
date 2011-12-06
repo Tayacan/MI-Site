@@ -1,6 +1,6 @@
 <?php
-	require_once('../util.php');
-	top('Register new user', '../');
+	require_once('util.php');
+	top('Register new user', '');
 
 	if(!empty($_GET['error'])) {
 		if($_GET['error'] == 1){

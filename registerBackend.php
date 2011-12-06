@@ -33,8 +33,8 @@
 ?>
 
 <?php
-	require_once('../util.php');
-	top('','../');
+	require_once('util.php');
+	top();
 	if(mysql_query($newUser)) {
 		echo "User created.";
 	}
