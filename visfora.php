@@ -1,6 +1,8 @@
 <?php //this is the php datebase code
 	require_once("util.php");//thus is the html top
 	require_once('connect.php');
+	top();
+	
 	$id =$_GET['catID'];
 	$query = "SELECT name,description,foraID FROM fora WHERE categoryID=".$id." ORDER BY foraID DESC;";
 	//echo $query;
@@ -13,6 +15,6 @@
 				// echo'<span style="float:right; margin-right:5px;"><a href="sletforum.php?foraid='.$row["foraID"].'&catID='.$id.'">Slet</a></span></h3>';
 				// echo'<br/>';
 			}
-		
+	echo "<a href='forum.php?categoryid=".$id."'>tilbage</a>";	
 	bottom();//this is the html bottom
 ?>
