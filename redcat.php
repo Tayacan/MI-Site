@@ -18,9 +18,9 @@
 				exit;
 			}
 			
-			top();
+			top();// siden starter
 			echo "<p><a href='redcat.php'>Gå tilbage</a></p>";// tilbage link
-			/* Her udskrives fejl hvis man har glemt at skrive overskrift, eller opretter en kategori med samme navn som en allederede eksisterende
+			/* Her udskrives fejlmeddelelser hvis man har glemt at skrive overskrift, eller opretter en kategori med samme navn som en allederede eksisterende
 			denne kode bliver først aktuel når man sendes tilbage til den fra newcat.php*/
 			if(isset($_GET['error'])) { 
 				if($_GET['error'] == 1) {
@@ -59,17 +59,16 @@
 	<p>
 		<span class="label">overskrift:</span>
 		<input type="text" name="overskrift" size="80" value="<?php echo $rednavn;?>"/>
-		<br/>
+		<br />
 		<span class="label">beskrivelse:</span>
 		<textarea cols="60" rows="10" name="beskrivelse"><?php echo $redtekst;?></textarea>
-	</P>
+	</p>
 	<p>
 		<input type="Submit" value="Rediger"/>
-	</P>
+	</p>
 </form>
 <h2>Fora i denne kategori</h2>
 <p>vælg hvilket forum du vil redigerer</p>
-<p>
 <?php		//ligesom i listen over kategorier kommer der her en liste over fora, hvor man kan redigerer, slette eller oprette nyt forum, de sorteres efter id
 			$resultat = mysql_query("SELECT name,foraID FROM fora WHERE categoryID = ".$id." ORDER BY foraID DESC;") or die(mysql_error());
 			while($row=mysql_fetch_array($resultat)){
@@ -79,10 +78,7 @@
 				echo'<span style="float:right; margin-right:5px; cursor:pointer;" onclick="confirmation('.$row["foraID"].', '.$id.')">Slet</span></h3>';
 				echo'<br/>';
 			}	
-?>
-</p>
-<?php 
-			echo "<a href='opretforum.php?catID= ".$id."'>Opret et nyt forum<a/><br/>";// her kan et nyt forum oprettes
+			echo "<a href='opretforum.php?catID=".$id."'>Opret et nyt forum<a/><br/>";// her kan et nyt forum oprettes
 		}
 	}
 bottom();
