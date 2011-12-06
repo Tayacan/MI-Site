@@ -23,7 +23,7 @@
 	top("","../");
 	
 	header('Location: ../index.php');
-	echo"Shit worked! You are logged in as ".$_POST['username'];
+	exit;
 	
 	bottom();
 ?>
