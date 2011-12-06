@@ -9,7 +9,18 @@
 	while($row = mysql_fetch_array($isadmin)){
 		if($row['isAdmin']==1){
 			top();
-			
+				
+				/* Her udskrives fejl hvis man har glemt at skrive overskrift, eller opretter en kategori med samme navn som en allederede eksisterende
+			denne kode bliver først aktuel når man sendes tilbage til den fra newcat.php*/
+			if(isset($_GET['error'])) { 
+				if($_GET['error'] == 1) {
+					echo "<span style='color:red;'>Du har ikke skrevet en overskrift.</span><br /><br />";
+				} 
+				else if($_GET['error'] == 2) {
+					echo "<span style='color:red;'>En kategori af samme navn er allerede oprettet.</span><br /><br />";
+				}
+			}
+			echo "<a href='adminmenu.php'>tilbage</a>";// tilbage link hvis man fortryder
 ?>
 <!-- ligesom i opret kategori, kan der oprettes fora-->
 <h2>Opret forum</h2>

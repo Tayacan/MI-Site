@@ -30,7 +30,7 @@
 </script>	
 
 <h1> Admin menu </h1><!-- Her starter admin menuen-->
-<p>
+<p />
 <?php	/* her bliver alle kategorier der er oprettet vist i rækkefølge efter id, Her kan man slette en kategori, eller man kan nu gå ind under en kategori 
 		og redigerer navn eller beskrivelse, samt se og oprette, slette eller redigere fora */
 			echo "vælg hvilket kategori du vil redigerer"; 
@@ -43,10 +43,8 @@
 				echo'<br/>';
 			}
 ?>
-</p>
-<p>
-	<a href="opretcat.php">Opret kategori<a/><br/> <!-- link til at oprette ny kategori-->
-</p>
+
+	<a href="opretcat.php">Opret kategori<a/> <!-- link til at oprette ny kategori-->
 <?php
 		}
 		else{//hvis ikke man er admin sendes man til forummet
