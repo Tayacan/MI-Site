@@ -2,21 +2,23 @@
 require_once("util.php");//thus is the html top
 require_once('connect.php');
 require_once('auth.php');
-	
+	//admintjek
 	$admincheck = 'SELECT isAdmin FROM users WHERE userID = "'.@$_SESSION['LoggedIn'].'";';
 	$isadmin = mysql_query($admincheck) or die(mysql_error());
 	while($row = mysql_fetch_array($isadmin)){
 		if($row['isAdmin']==1){
 			top();
- 
+			
 			$id =$_POST["catID"];
-			$overskrift=$_POST["overskrift"];
-			$description=$_POST["description"];
-
-			$chekfora = 'SELECT name FROM fora WHERE name = "'.$overskrift.'";';//tjekker om kategorien er blevet oprette før
+			$overskrift=mysql_real_escape_string($_POST["overskrift"]);// her er der taget højde for beskyttelse mod sql injektion
+			$description=mysql_real_escape_string($_POST["description"]);// -||-
+			
+			// tjekke om et forum med samme navn allerede er oprettet
+			//husk at tjekke om den er tom
+			$chekfora = 'SELECT name FROM fora WHERE name = "'.$overskrift.'";';
 			$checkname = mysql_query($chekfora) or die(mysql_error());
 			if(mysql_num_rows($checkname) >0){
-				header('Location: redigerfora.php?error=1');
+				header('Location: opretforum.php?error=1');
 				exit;
 			}
 			$sql="INSERT INTO fora (name, description, categoryID)

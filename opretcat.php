@@ -22,7 +22,7 @@
 			}
 			echo "<a href='adminmenu.php'>tilbage</a>";// tilbage link hvis man fortryder
 ?>
-<!-- Her skriver overskrift og beskrivelse af kategorien, når man submitter sendes man viderer til newcat.php som indsætter i kategori tabellen-->
+<!-- Her skrives overskrift og beskrivelse af kategorien, når man submitter sendes variablerne viderer til newcat.php som indsætter i kategori tabellen-->
 
 <h1>Opret kategori</h1>
 <form action="newcat.php" method="post">

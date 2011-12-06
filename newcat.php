@@ -18,6 +18,7 @@
 			$overskrift=mysql_real_escape_string($_POST["overskrift"]); // her er der taget højde for beskyttelse mod sql injektion
 			$beskrivelse=mysql_real_escape_string($_POST["beskrivelse"]); // -||-
 			
+			// her tjekkes om kategoren er blevet oprettet før, udybet i redcatquerry.php
 			$chekcat = 'SELECT categoryName FROM categories WHERE categoryName = "'.$overskrift.'";';//tjekker om kategorien er blevet oprette før
 			$checkname = mysql_query($chekcat) or die(mysql_error());
 			if(mysql_num_rows($checkname) >0){ 

@@ -11,6 +11,7 @@
 			top();
 			
 ?>
+<!-- ligesom i opret kategori, kan der oprettes fora-->
 <h2>Opret forum</h2>
 <form action="nyt-forum.php" method="post">
 <input type="hidden" name="catID" value="<?php echo $_GET['catID'];?>"/>
