@@ -1,6 +1,6 @@
 <?php
-	require_once('../util.php'); //To make sure that util.php is only required once
-	top("","../");
+	require_once('util.php'); //To make sure that util.php is only required once
+	top();
 	
 	//Checks if loginBackend has noticed any errors, if it has, it gives a fitting errormessage
 	if(isset($_GET['error'])){

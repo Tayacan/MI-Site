@@ -1,6 +1,6 @@
 <?php
-	require_once('../connect.php'); //To make sure that connect.php is only required once
-	require_once('../util.php'); //To make sure that util.php is only required once
+	require_once('connect.php'); //To make sure that connect.php is only required once
+	require_once('util.php'); //To make sure that util.php is only required once
 	session_start();
 	
 	// Check that everything is set:
@@ -20,9 +20,9 @@
 	$row = mysql_fetch_array($result); //Henter valgte data fra databasen
 	$_SESSION['LoggedIn'] = $row['userID'];
 	
-	top("","../");
+	top();
 	
-	header('Location: ../index.php');
+	header('Location: index.php');
 	exit;
 	
 	bottom();
