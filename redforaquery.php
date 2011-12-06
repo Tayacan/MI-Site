@@ -27,12 +27,12 @@ require_once('auth.php');
 				exit;
 			}
 		
-			if(isset($_POST["foraid"])){
-				$id =$_POST["foraid"];
-				$sql="UPDATE fora SET name='".$_POST["overskrift"]."', description='".$_POST["beskrivelse"]."' WHERE foraID=".$id.";";
-				mysql_query($sql) or die(mysql_error());
-				echo "<a href='redcat.php?catID=".$catID."''>tilbage</a>";
-			}
+			// if(isset($_POST["foraid"])){
+				// $id =$_POST["foraid"];
+			$sql="UPDATE fora SET name='".$_POST["overskrift"]."', description='".$_POST["beskrivelse"]."' WHERE foraID=".$id.";";
+			mysql_query($sql) or die(mysql_error());
+			echo "<p>stuff works</p><a href='redcat.php?catID=".$catID."''>tilbage</a>";
+			// }
 		}
 	}
 bottom();//this is the html bottom
