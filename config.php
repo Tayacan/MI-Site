@@ -34,7 +34,6 @@
 					`email` VARCHAR( 30 ) NOT NULL ,
 					`isAdmin` TINYINT( 1 ) NOT NULL DEFAULT '0' ,
 					PRIMARY KEY (  `userID` ) ,
-					INDEX (  `userID` ) ,
 					UNIQUE (
 						`user` ,
 						`email`
@@ -42,6 +41,8 @@
 					) ENGINE = INNODB;";
 			mysql_query($makeUsers) or die(mysql_error());
 			echo 'Created table users<br />';
+			$makeStandardAdmin = "INSERT INTO users (user,password,firstname,lastname,email,isAdmin) VALUES ('admin','".md5("admin")."','Admin','Admin','admin',1);";
+			mysql_query($makeStandardAdmin) or die(mysql_error());
                 
         	} else {
 			// Code for checking columns of table.
@@ -61,21 +62,6 @@
 					) ENGINE = INNODB;";
 			mysql_query($makeCats) or die(mysql_error());
 			echo 'Created table categories<br />';
-                
-        	} else {
-			// Code for checking columns of table.
-		}
-		$checkAdmins = "SELECT * FROM adminList;";
-		$result = mysql_query($checkAdmins);
-		echo 'Checking table adminList<br />';
-		if(!$result) {
-			echo 'Creating table adminList.<br />';
-			$makeAdmins = "	CREATE TABLE  `miForum`.`adminList` (
-					`forumID` INT NOT NULL ,
-					`adminID` INT NOT NULL
-					) ENGINE = INNODB;";
-			mysql_query($makeAdmins) or die(mysql_error());
-			echo 'Created table adminList<br />';
                 
         	} else {
 			// Code for checking columns of table.
@@ -160,6 +146,15 @@
 			
 			echo "Created user misite";
 		}
+
+		// Relations
+		$alterFora = "ALTER TABLE  `fora` ADD INDEX (  `categoryID` )";
+		$makeRelationForaCat = "ALTER TABLE  `fora` ADD FOREIGN KEY (  `categoryID` ) REFERENCES  `miForum`.`categories` (
+						`categoryID`
+						) ON DELETE CASCADE ON UPDATE CASCADE ;";
+		mysql_query($alterFora) or die(mysql_error());
+		mysql_query($makeRelationForaCat) or die(mysql_error());
+
 	}
 ?>
 
