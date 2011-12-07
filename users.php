@@ -14,9 +14,9 @@
 	$findUsers = "SELECT * FROM users ORDER BY user";
 	$result = mysql_query($findUsers) or die(mysql_error());
 	
-	if (isset($_POST['userId'])){
+	if ($isAdmin == 1 && isset($_POST['userId'])){
 		//echo"userID er ".$_POST['userId'];
-		$sql="UPDATE users SET isAdmin='1' WHERE userID=".$_POST['userId'].";";
+		$sql="UPDATE users SET isAdmin='1' WHERE userID=".mysql_real_escape_string($_POST['userId']).";";
 		mysql_query($sql) or die(mysql_error());
 		header('Location: users.php');
 	}
