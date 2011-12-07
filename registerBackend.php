@@ -13,6 +13,7 @@
 	if($conn = mysql_connect('localhost','misite','kummefryser')) {
 		mysql_select_db('miForum') or die(mysql_error());
 
+		//Arrays of which chars that should be replaced with what
 		$search = array('<', '>');
 		$replace = array('&lt;', '&gt;');
 		

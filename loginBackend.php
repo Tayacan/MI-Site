@@ -10,6 +10,7 @@
 		exit;
 	}
 	
+	//Arrays of which chars that should be replaced with what
 	$search = array('<', '>');
 	$replace = array('&lt;', '&gt;');
 	
