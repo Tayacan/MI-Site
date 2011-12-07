@@ -13,12 +13,15 @@
 	if($conn = mysql_connect('localhost','misite','kummefryser')) {
 		mysql_select_db('miForum') or die(mysql_error());
 
+		$search = array('<', '>');
+		$replace = array('&lt;', '&gt;');
+		
 		// Sanitize input
-		$username = mysql_real_escape_string($_POST['username']);
+		$username = mysql_real_escape_string(str_replace($search, $replace, $_POST['username']));
 		$password = md5(mysql_real_escape_string($_POST['password1']));
-		$firstname = mysql_real_escape_string($_POST['firstname']);
-		$lastname = mysql_real_escape_string($_POST['lastname']);
-		$email = mysql_real_escape_string($_POST['email']);
+		$firstname = mysql_real_escape_string(str_replace($search, $replace, $_POST['firstname']));
+		$lastname = mysql_real_escape_string(str_replace($search, $replace, $_POST['lastname']));
+		$email = mysql_real_escape_string(str_replace($search, $replace, $_POST['email']));
 
 		$checkUserName = "SELECT * FROM users WHERE user='".$username."';";
 

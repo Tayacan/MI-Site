@@ -5,15 +5,22 @@
 	
 	top();
 	
-	$findUsers = "SELECT * FROM users";
-	$result = mysql_query($findUsers) or die(mysql_error());
-	
 	//admin tjek
 	$admincheck = 'SELECT isAdmin FROM users WHERE userID = "'.@$_SESSION['LoggedIn'].'";';
 	$isadmin = mysql_query($admincheck) or die(mysql_error());
 	$adminCheck = mysql_fetch_array($isadmin);
 	$isAdmin = $adminCheck['isAdmin'];
-		
+	
+	$findUsers = "SELECT * FROM users ORDER BY user";
+	$result = mysql_query($findUsers) or die(mysql_error());
+	
+	if (isset($_POST['userId'])){
+		//echo"userID er ".$_POST['userId'];
+		$sql="UPDATE users SET isAdmin='1' WHERE userID=".$_POST['userId'].";";
+		mysql_query($sql) or die(mysql_error());
+		header('Location: users.php');
+	}
+	
 	echo"<br />";
 	echo"<table>";
 	echo '<tr>
@@ -23,7 +30,7 @@
 			<td><b>Email:<b/></td>
 			<td><b>Admin:<b/></td>';
 			if($isAdmin == 1){
-				echo'<td><b>G&oslashr til admin</b></td>';
+				echo'<td><b>Gør til admin</b></td>';
 			}
 	echo'</tr>';
 	while($row=mysql_fetch_array($result)){
@@ -38,7 +45,14 @@
 				echo'<td>nej</td>';
 			}
 			if($isAdmin == 1){
-				echo'<td>[link]</td>';
+				?>
+				<td>
+					<form action="users.php" method="post">
+						<input type="hidden" name="userId" value="<?php echo $row['userID']; ?>"/>
+						<input type="submit" value="makeAdmin"/>
+					</form>
+				</td>
+				<?php
 			}
 			
 			

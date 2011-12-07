@@ -10,7 +10,10 @@
 		exit;
 	}
 	
-	$checkLogin = "SELECT * FROM users WHERE user='".mysql_real_escape_string($_POST['username'])."' AND password='".md5(mysql_real_escape_string($_POST['password']))."';";
+	$search = array('<', '>');
+	$replace = array('&lt;', '&gt;');
+	
+	$checkLogin = "SELECT * FROM users WHERE user='".mysql_real_escape_string(str_replace($search, $replace, $_POST['username']))."' AND password='".md5(mysql_real_escape_string($_POST['password']))."';";
 	$result = mysql_query($checkLogin) or die(mysql_error());
 	if(mysql_num_rows($result) < 1) {
 		header('Location: login.php?error=2');

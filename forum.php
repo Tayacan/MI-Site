@@ -16,7 +16,7 @@
 		make_box($row['categoryName'],$row['description'],"visfora.php?catID=".$row['categoryID']."");
 	}
 	
-		
+	echo"<a href='users.php'>Se brugere</a>";	
 	//echo "<a href='oprettraad.php?foraid=".$id."'>opret tråd</a>";
 	//echo "<a href='oprettraad.php'>opret tråd</a>";
 
