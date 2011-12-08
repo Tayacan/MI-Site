@@ -4,6 +4,10 @@ body {
 	font-family: Georgia, serif;
 	background-color: #F0F0FF;
 }
+div.background{
+	background-image: url('bg2.jpg'); 
+	background-repeat: repeat; 
+}
 
 div.fora {
 	width: 156px;

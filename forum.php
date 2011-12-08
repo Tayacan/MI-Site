@@ -2,7 +2,7 @@
 	require_once("util.php");//thus is the html top
 	require_once('connect.php');
 	top();
-	
+	//echo "<div class='background'";
 	$admincheck = 'SELECT isAdmin FROM users WHERE userID = "'.@$_SESSION['LoggedIn'].'";';
 	$isadmin = mysql_query($admincheck) or die(mysql_error());
 	while($row = mysql_fetch_array($isadmin)){
@@ -24,8 +24,6 @@
 	echo"<a href='users.php'>Se brugere</a>";	
 	//echo "<a href='oprettraad.php?foraid=".$id."'>opret tråd</a>";
 	//echo "<a href='oprettraad.php'>opret tråd</a>";
-
-?>
-
-<?php bottom();//this is the html bottom
+//echo "</div>";
+ bottom();//this is the html bottom
 ?>
