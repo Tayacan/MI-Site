@@ -24,7 +24,7 @@
 	if(isset($_SESSION['LoggedIn'])) {
 		echo "<br /><a href='writeArticle.php'><u>Skriv ny artikel</u></a>";
 	} else {
-		echo "<br /><a href='user_admin/login.php'>Log in for at skrive en artikel</a>";
+		echo "<br /><a href='login.php'>Log in for at skrive en artikel</a>";
 	}
 	echo "</div>";
 	

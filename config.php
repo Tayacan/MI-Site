@@ -24,14 +24,14 @@
 		$result = mysql_query($checkUsers);
 		echo 'Checking table users<br />';
 		if(!$result) {
-			echo 'Creating table users.<br />';
+			echo 'Creating table users.<br />'; //user, firstname, lastname and email is 4 time as big as allowed, so '<' and '>' can be replaced with '&lt;' and '&gt;'
 			$makeUsers = "	CREATE TABLE  `miForum`.`users` (
 					`userID` INT( 10 ) NOT NULL AUTO_INCREMENT ,
-					`user` VARCHAR( 15 ) NOT NULL ,
+					`user` VARCHAR( 60 ) NOT NULL ,
 					`password` VARCHAR( 50 ) NOT NULL ,
-					`firstname` VARCHAR( 30 ) NOT NULL ,
-					`lastname` VARCHAR( 30 ) NOT NULL ,
-					`email` VARCHAR( 30 ) NOT NULL ,
+					`firstname` VARCHAR( 120 ) NOT NULL ,
+					`lastname` VARCHAR( 120 ) NOT NULL ,
+					`email` VARCHAR( 120 ) NOT NULL ,
 					`isAdmin` TINYINT( 1 ) NOT NULL DEFAULT '0' ,
 					PRIMARY KEY (  `userID` ) ,
 					UNIQUE (

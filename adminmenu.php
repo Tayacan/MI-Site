@@ -43,8 +43,8 @@
 				echo'<br/>';
 			}
 ?>
-
-	<a href="opretcat.php">Opret kategori<a/> <!-- link til at oprette ny kategori-->
+<p />
+<a href="opretcat.php">Opret kategori<a/> <!-- link til at oprette ny kategori-->
 <?php
 		}
 		else{//hvis ikke man er admin sendes man til forummet

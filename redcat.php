@@ -32,8 +32,8 @@
 			}
 			
 			// her henter den informationerne fra den valgte kategori
-			$id =$_GET["catID"];
-			$finder = mysql_query("SELECT * FROM categories WHERE categoryID = ".$id.";");
+			$catID =$_GET["catID"];
+			$finder = mysql_query("SELECT * FROM categories WHERE categoryID = ".$catID.";");
 			while($row=mysql_fetch_array($finder)){
 				$rednavn = $row['categoryName'];
 				$redtekst = $row['description'];
@@ -54,7 +54,7 @@
 <!-- som overskriften angiver bliver kan man her ændre i overskrift eller beskrivelse i den valgte kategori-->
 <h4>Rediger kategoriens navn eller beskrivelse</h4>
 <form action="redcatquery.php" method="post">
-	<input type="hidden" name="catID" value="<?php echo $id; ?>"/>
+	<input type="hidden" name="catID" value="<?php echo $catID; ?>"/>
 	<input type="hidden" name="oldname" value="<?php echo $rednavn; ?>" /><!-- For at brugeren kan redigerer i beskrivelsen, skal vi kunne tjekke om det gamle navn ændre sig-->
 	<p>
 		<span class="label">overskrift:</span>
@@ -64,21 +64,21 @@
 		<textarea cols="60" rows="10" name="beskrivelse"><?php echo $redtekst;?></textarea>
 	</p>
 	<p>
-		<input type="Submit" value="Rediger"/>
+		<input type="Submit" value="Gem ændringer"/>
 	</p>
 </form>
 <h2>Fora i denne kategori</h2>
 <p>vælg hvilket forum du vil redigerer</p>
 <?php		//ligesom i listen over kategorier kommer der her en liste over fora, hvor man kan redigerer, slette eller oprette nyt forum, de sorteres efter id
-			$resultat = mysql_query("SELECT name,foraID FROM fora WHERE categoryID = ".$id." ORDER BY foraID DESC;") or die(mysql_error());
+			$resultat = mysql_query("SELECT name,foraID FROM fora WHERE categoryID = ".$catID." ORDER BY foraID DESC;") or die(mysql_error());
 			while($row=mysql_fetch_array($resultat)){
-				echo '<h3><a href="redigerforum.php?foraid='.$row["foraID"].'&catID='.$id.'">';
+				echo '<h3><a href="redigerforum.php?foraid='.$row["foraID"].'&catID='.$catID.'">';
 				echo $row["name"];
 				echo '</a>';
-				echo'<span style="float:right; margin-right:5px; cursor:pointer;" onclick="confirmation('.$row["foraID"].', '.$id.')">Slet</span></h3>';
+				echo'<span style="float:right; margin-right:5px; cursor:pointer;" onclick="confirmation('.$row["foraID"].', '.$catID.')">Slet</span></h3>';
 				echo'<br/>';
 			}	
-			echo "<a href='opretforum.php?catID=".$id."'>Opret et nyt forum<a/><br/>";// her kan et nyt forum oprettes
+			echo "<a href='opretforum.php?catID=".$catID."'>Opret et nyt forum<a/><br/>";// her kan et nyt forum oprettes
 		}
 	}
 bottom();
