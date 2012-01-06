@@ -7,8 +7,9 @@ require_once('auth.php');
 			top();
  
 			$id =$_POST["foraID"];
-			$overskrift=$_POST["overskrift"];
-			$description=$_POST["description"];
+			$overskrift=mysql_real_escape_string($_POST["overskrift"]);// taget højde for sql injektions 
+			$beskrivelse=mysql_real_escape_string($_POST["description"]);// -||-
+			
 
 			$checkthread = 'SELECT name FROM threads WHERE name = "'.$overskrift.'";';//tjekker om kategorien er blevet oprette før
 			$checkname = mysql_query($checkthread) or die(mysql_error());
@@ -16,7 +17,7 @@ require_once('auth.php');
 				header('Location: redigertraad.php?error=1');
 				exit;
 			}
-			$sql="INSERT INTO fora (name, description, foraID)
+			$sql="INSERT INTO threads (name, description, foraID)
 				VALUES ('".$overskrift."','".$description."','".$id."');";
 				echo($sql);
 				mysql_query($sql);

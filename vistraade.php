@@ -11,7 +11,7 @@
 			fora_menu($row['name'],$row['description'],"epicfejling.php?foraID=".$row['foraID']."");
 				}
 			
-	echo "<a href='visfora.php?categoryid=".$id."'>tilbage</a></br>";
-		echo "<a href='oprettraad.php?foraID=".$id."'>opret en tråd</a>"; //login godkendelse først
+	echo "<a href='visfora.php?categoryid=".$id."'>tilbage</a></br>"; // virker ikke
+		echo "<a href='oprettraad.php?foraID=".$id."'>opret en tråd</a>"; 
 	
 	bottom();//this is the html bottom
