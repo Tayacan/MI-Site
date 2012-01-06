@@ -7,8 +7,8 @@ require_once('auth.php');
 			top();
  
 			$id =$_POST["foraID"];
-			$overskrift=$_POST["overskrift"];
-			$description=$_POST["description"];
+			$overskrift=mysql_real_escape_string($_POST["overskrift"]);
+			$description=mysql_real_escape_string($_POST["written_text"]);
 
 			$checkthread = 'SELECT name FROM threads WHERE name = "'.$overskrift.'";';//tjekker om kategorien er blevet oprette før
 			$checkname = mysql_query($checkthread) or die(mysql_error());
@@ -19,7 +19,7 @@ require_once('auth.php');
 			$sql="INSERT INTO fora (name, description, foraID)
 				VALUES ('".$overskrift."','".$description."','".$id."');";
 				echo($sql);
-				mysql_query($sql);
+				mysql_query($sql) or die(mysql_error());
 				//echo "<a href='redcat.php?categoryid=".$id."'>tilbage</a>";
 
 

@@ -15,12 +15,17 @@
 		<input type="text" name="overskrift"size="100"/>
 		<br/>
 		<span class="label">Description</span>
-		<textarea cols="100 ROWS="10" name="description"></textarea>
+<!--		<textarea cols="100 ROWS="10" name="description"></textarea>
 		<br/>
-	</p>
+	</p>-->
+
+		<script type="text/javascript" src="text_edit.js"></script>
+		<?php text_editor(); ?>
+
 	<p>
 		<input type="Submit"value="opret traad"/>
 	</p>
+
 </form>
 		
 <?php 
