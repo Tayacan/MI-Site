@@ -17,8 +17,8 @@ require_once('auth.php');
 				header('Location: redigertraad.php?error=1');
 				exit;
 			}
-			$sql="INSERT INTO threads (name, description, foraID)
-				VALUES ('".$overskrift."','".$description."','".$id."');";
+			$sql="INSERT INTO threads (name, description, foraID, userID)
+				VALUES ('".$overskrift."','".$beskrivelse."','".$id."','".$_SESSION['LoggedIn']."');";
 				echo($sql);
 				mysql_query($sql) or die(mysql_error());
 				//echo "<a href='redcat.php?categoryid=".$id."'>tilbage</a>";
