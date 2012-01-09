@@ -3,7 +3,7 @@ body {
 	margin: 0;
 	font-family: Georgia, serif;
 /*	background-color: #F0F0FF;*/
-	background-image: url('line.jpg');
+	background-image: url('images/line.jpg');
 }
 div.background{
 	background-image: url('bg2.jpg'); 
