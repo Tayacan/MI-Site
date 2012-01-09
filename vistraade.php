@@ -3,15 +3,17 @@
 	require_once('connect.php');
 	top();
 	
-	$id =$_GET['foraID'];
-	$query = "SELECT name,description,foraID FROM fora WHERE foraID=".$id." ORDER BY foraID DESC;";
-	//echo $query;
-	$resultat = mysql_query($query) or die(mysql_error());//sorterer alle fora der er oprettet efter id
-			while($row=mysql_fetch_array($resultat)){
-			fora_menu($row['name'],$row['description'],"epicfejling.php?foraID=".$row['foraID']."");
-				}
-			
-	echo "<a href='visfora.php?categoryid=".$id."'>tilbage</a></br>"; // virker ikke
-		echo "<a href='oprettraad.php?foraID=".$id."'>opret en tråd</a>"; 
+	$id = $_GET['foraID'];
+	$cat = $_GET['catID'];
+
+	$getThreadsQuery = "SELECT * FROM threads WHERE foraID=".$id;
+	$result = mysql_query($getThreadsQuery) or die(mysql_error());
+
+	while($row = mysql_fetch_array($result)) {
+		echo $row['name']."<br />";
+	}
+
+	echo "<a href='visfora.php?catID=".$cat."'>tilbage</a></br>";
+	echo "<a href='oprettraad.php?foraID=".$id."'>opret en tråd</a>"; 
 	
 	bottom();//this is the html bottom
