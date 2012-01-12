@@ -27,13 +27,16 @@
 	$thr[0] = mysql_fetch_array($threads);
 	$thr[1] = mysql_fetch_array($threads);
 	$thr[2] = mysql_fetch_array($threads);
+
+	// Get categories of threads:
+	//$getCats = "SELECT categoryID FROM fora WHERE foraID=";
 ?>
 
 <div>
 
 	<div class="box" style="width: 625px; height: 150px;">
 		<h3>Seneste forum-aktivitet</h3>
-		<a href="index.php?id=<?php echo $latestThread['threadID']; ?>" 
+		<a href="viewThread.php?threadID=<?php echo $latestThread['threadID']; ?>
 				style="text-decoration: none; color: black;">
 		<div style="width:55%;height:118px;float:left;text-align:justify;
 				border-right: 1px solid #8080FF;padding:5px;">
