@@ -57,6 +57,38 @@
         echo '</script>';
 	echo "</div>";
 
+	// Display the responses
+	$getPosts = "SELECT * FROM post WHERE threadID=".$id.";";
+	$postRes = mysql_query($getPosts) or die(mysql_error());
+	while($row = mysql_fetch_array($postRes)) {
+		$getAuthor = "SELECT firstname,lastname FROM users WHERE 
+						userID=".$row['userID'];
+		$res = mysql_query($getAuthor);
+		$author = "Unknown";
+		if(mysql_num_rows($res) == 1) {
+			$rowA = mysql_fetch_array($res);
+			$author = $rowA['firstname']." ".$rowA['lastname'];
+		}
+		echo "	<div class='box' style='width:97%;height:auto'>";
+		$text =  $row['text'];
+        	echo '<script type="text/javascript">';
+        	echo 'window.onload = function () {prettyPrint(); };';
+        	echo 'var textToWrite = "'.mysql_real_escape_string($text).'";';
+        	echo 'textToWrite = view_text(textToWrite);';
+	
+		// For some reason not all the text ends up in the paragraph..
+        	echo 'document.write("<p>"+textToWrite+"</p>");'; 
+        	echo '</script>';
+		echo "Skrevet af: <i>".$author."</i>";
+		echo "</div>";
+	}
+
+	// Link to answer the thread
+	@session_start();
+	if(isset($_SESSION['LoggedIn'])) {
+		echo "<a href='writePost.php?threadID=".$id."&catID=".$_GET['catID']."'>Svar</a><br />";
+	}
+
 	// Link to go back
 	echo "<a href='vistraade.php?foraID=".$fora."&catID=".$_GET['catID']."'>
 								Tilbage</a>";

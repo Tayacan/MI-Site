@@ -140,10 +140,19 @@ Når man, på forum-forsiden, klikker på en kategori, kommer man til en side de
 
 \includegraphics[width=100mm]{mi11.png}
 
-Det er den samme PHP-fil der viser alle kategorier, den finder så de rette fora ud fra kategoriens ID, som sendes via $\$$$\_$GET-array'et. Vi bruger et SQL-udtræk til at hente alle fora hvor kategori-ID'et matcher, og viser dem med de nyeste først, på præcis samme måde som med kategorierne på forum-forsiden.
+Det er den samme PHP-fil der viser alle kategorier, den finder så de rette fora ud fra kategoriens ID, som sendes via $\$\_$GET-array'et. Vi bruger et SQL-udtræk til at hente alle fora hvor kategori-ID'et matcher, og viser dem med de nyeste først, på præcis samme måde som med kategorierne på forum-forsiden.
 
 \subsubsection{Vis fora}
 Foraer bliver vist meget på samme måde som kategorier - en liste af alle tråde i det pågældende fora, sorteret med de nyeste først. Forskellen er at brugere her har muligheden for at oprette tråde.
+
+\subsubsection{Vis tråd}
+Når man, på Vis Fora siden, klikker på en af de viste tråde, kommer man til denne side. Her vises først titlen og den tekst tråd-staren skrev, derefter alle de posts der er skrevet i tråden. Ved hver post vises navnet på den bruger der har skrevet den.
+
+\includegraphics[width=100mm]{mi12.png}
+
+Nederst på siden vises der en Tilbage-knap som fører til Vis Fora siden, og, hvis man er logget ind, en Svar-knap.
+
+Siden fungerer ved hjælp af to queries - et der finder åbningsposten i threads-tabellen, og et der finder de resterende posts i post-tabellen. Posts vises vha. et while-loop, som udskriver en bunke javascript der sørger for at formatere teksten rigtigt.
 
 \subsubsection{Artikel-forsiden}
 Når man klikker på knappen 'Artikler' i navigations-baren kommer man til denne side. Her er alle artikler listet ved navn, og man kan klikke på dem for at læse artiklen. Nederst på siden er der et link - hvis man er logget ind står der 'Skriv ny artikel', og det fører til en side hvor man kan - hold fast - skrive en ny artikel! Hvis ikke man er logget ind, står der 'Log ind for at skrive en ny artikel', og linket fører til login-siden.

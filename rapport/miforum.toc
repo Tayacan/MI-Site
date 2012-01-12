@@ -12,11 +12,12 @@
 \contentsline {subsubsection}{\numberline {2.4.4}Rediger kategori og -forum siderne}{8}
 \contentsline {subsubsection}{\numberline {2.4.5}Vis kategori}{8}
 \contentsline {subsubsection}{\numberline {2.4.6}Vis fora}{9}
-\contentsline {subsubsection}{\numberline {2.4.7}Artikel-forsiden}{9}
-\contentsline {subsubsection}{\numberline {2.4.8}Vis artikel}{10}
-\contentsline {subsubsection}{\numberline {2.4.9}Skriv artikel}{11}
-\contentsline {subsubsection}{\numberline {2.4.10}Rediger artikel}{12}
-\contentsline {subsubsection}{\numberline {2.4.11}Login-siden}{12}
-\contentsline {subsubsection}{\numberline {2.4.12}Registreringssiden}{13}
-\contentsline {section}{\numberline {3}Afpr\IeC {\o }vning af siden}{15}
-\contentsline {subsection}{\numberline {3.1}Typiske problemer}{15}
+\contentsline {subsubsection}{\numberline {2.4.7}Vis tr\IeC {\r a}d}{9}
+\contentsline {subsubsection}{\numberline {2.4.8}Artikel-forsiden}{10}
+\contentsline {subsubsection}{\numberline {2.4.9}Vis artikel}{11}
+\contentsline {subsubsection}{\numberline {2.4.10}Skriv artikel}{12}
+\contentsline {subsubsection}{\numberline {2.4.11}Rediger artikel}{13}
+\contentsline {subsubsection}{\numberline {2.4.12}Login-siden}{13}
+\contentsline {subsubsection}{\numberline {2.4.13}Registreringssiden}{15}
+\contentsline {section}{\numberline {3}Afpr\IeC {\o }vning af siden}{16}
+\contentsline {subsection}{\numberline {3.1}Typiske problemer}{16}
