@@ -29,14 +29,21 @@
 	$thr[2] = mysql_fetch_array($threads);
 
 	// Get categories of threads:
-	//$getCats = "SELECT categoryID FROM fora WHERE foraID=";
+	function getCat($foraID) {
+		$query = "SELECT categoryID FROM fora WHERE foraID=".$foraID;
+		$res = mysql_query($query);
+		$catID = mysql_fetch_array($res);
+		return $catID['categoryID'];
+	}
+	
 ?>
 
 <div>
 
 	<div class="box" style="width: 625px; height: 150px;">
 		<h3>Seneste forum-aktivitet</h3>
-		<a href="viewThread.php?threadID=<?php echo $latestThread['threadID']; ?>
+		<a href="viewThread.php?threadID=<?php echo $latestThread['threadID']; ?>&catID=
+		<?php echo getCat($latestThread['foraID']); ?>"
 				style="text-decoration: none; color: black;">
 		<div style="width:55%;height:118px;float:left;text-align:justify;
 				border-right: 1px solid #8080FF;padding:5px;">
@@ -63,9 +70,9 @@
 		</div></a>
 		<div style="position: relative; margin-left: 360px; margin-top: 10px;">
 			<?php
-				echo '<a class="boxlink" href="index.php?id='.$thr[0]['threadID'].'">'.$thr[0]['name'] . '</a><br />';
-				echo '<a class="boxlink" href="index.php?id='.$thr[1]['threadID'].'">'.$thr[1]['name'] . '</a><br />';
-				echo '<a class="boxlink" href="index.php?id='.$thr[2]['threadID'].'">'.$thr[2]['name'] . '</a><br />';
+				echo '<a class="boxlink" href="viewThread.php?threadID='.$thr[0]['threadID'].'&catID='.getCat($thr[0]['foraID']).'">'.$thr[0]['name'] . '</a><br />';
+				echo '<a class="boxlink" href="viewThread.php?threadID='.$thr[1]['threadID'].'&catID='.getCat($thr[1]['foraID']).'">'.$thr[1]['name'] . '</a><br />';
+				echo '<a class="boxlink" href="viewThread.php?threadID='.$thr[2]['threadID'].'&catID='.getCat($thr[2]['foraID']).'">'.$thr[2]['name'] . '</a><br />';
 			?>
 		</div>
 		

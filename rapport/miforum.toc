@@ -1,0 +1,22 @@
+\select@language {danish}
+\contentsline {section}{\numberline {1}Projektbeskrivelse}{4}
+\contentsline {section}{\numberline {2}Spec - MI Forum}{4}
+\contentsline {subsection}{\numberline {2.1}Overblik}{4}
+\contentsline {subsubsection}{\numberline {2.1.1}Software}{4}
+\contentsline {subsection}{\numberline {2.2}Hypotetiske cases}{5}
+\contentsline {subsection}{\numberline {2.3}Ikke-m\IeC {\r a}l}{5}
+\contentsline {subsection}{\numberline {2.4}Side-for-side specifikation}{6}
+\contentsline {subsubsection}{\numberline {2.4.1}Forside}{6}
+\contentsline {subsubsection}{\numberline {2.4.2}Forum-forsiden}{6}
+\contentsline {subsubsection}{\numberline {2.4.3}Adminmenuen}{7}
+\contentsline {subsubsection}{\numberline {2.4.4}Rediger kategori og -forum siderne}{8}
+\contentsline {subsubsection}{\numberline {2.4.5}Vis kategori}{8}
+\contentsline {subsubsection}{\numberline {2.4.6}Vis fora}{9}
+\contentsline {subsubsection}{\numberline {2.4.7}Artikel-forsiden}{9}
+\contentsline {subsubsection}{\numberline {2.4.8}Vis artikel}{10}
+\contentsline {subsubsection}{\numberline {2.4.9}Skriv artikel}{11}
+\contentsline {subsubsection}{\numberline {2.4.10}Rediger artikel}{12}
+\contentsline {subsubsection}{\numberline {2.4.11}Login-siden}{12}
+\contentsline {subsubsection}{\numberline {2.4.12}Registreringssiden}{13}
+\contentsline {section}{\numberline {3}Afpr\IeC {\o }vning af siden}{15}
+\contentsline {subsection}{\numberline {3.1}Typiske problemer}{15}
