@@ -7,14 +7,14 @@
 	
 	top();
 ?>
-<h2>Opret traad</h2>
+<h2>Opret tråd</h2>
 <form action="ny-traad.php" method="post">
 <input type="hidden" name="foraID" value="<?php echo $_GET['foraID'];?>"/> <!-- relation, husk foraID -->
 	<p>
-		<span class="label">Name</span>
+		<span class="label">Overskrift</span>
 		<input type="text" name="overskrift"size="100"/>
 		<br/>
-		<span class="label">Description</span>
+		<span class="label">Beskrivelse</span>
 <!--		<textarea cols="100 ROWS="10" name="description"></textarea>
 		<br/>
 	</p>-->
@@ -23,7 +23,7 @@
 		<?php text_editor(); ?>
 
 	<p>
-		<input type="Submit"value="opret traad"/>
+		<input type="Submit"value="opret tråd"/>
 	</p>
 
 </form>
