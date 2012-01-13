@@ -13,11 +13,19 @@
 \contentsline {subsubsection}{\numberline {2.4.5}Vis kategori}{8}
 \contentsline {subsubsection}{\numberline {2.4.6}Vis fora}{9}
 \contentsline {subsubsection}{\numberline {2.4.7}Vis tr\IeC {\r a}d}{9}
-\contentsline {subsubsection}{\numberline {2.4.8}Artikel-forsiden}{10}
-\contentsline {subsubsection}{\numberline {2.4.9}Vis artikel}{11}
-\contentsline {subsubsection}{\numberline {2.4.10}Skriv artikel}{12}
-\contentsline {subsubsection}{\numberline {2.4.11}Rediger artikel}{13}
-\contentsline {subsubsection}{\numberline {2.4.12}Login-siden}{14}
-\contentsline {subsubsection}{\numberline {2.4.13}Registreringssiden}{15}
-\contentsline {section}{\numberline {3}Afpr\IeC {\o }vning af siden}{16}
-\contentsline {subsection}{\numberline {3.1}Typiske problemer}{16}
+\contentsline {subsubsection}{\numberline {2.4.8}Opret tr\IeC {\r a}d}{10}
+\contentsline {subsubsection}{\numberline {2.4.9}Svar p\IeC {\r a} tr\IeC {\r a}d}{11}
+\contentsline {subsubsection}{\numberline {2.4.10}Artikel-forsiden}{11}
+\contentsline {subsubsection}{\numberline {2.4.11}Vis artikel}{12}
+\contentsline {subsubsection}{\numberline {2.4.12}Skriv artikel}{13}
+\contentsline {subsubsection}{\numberline {2.4.13}Rediger artikel}{15}
+\contentsline {subsubsection}{\numberline {2.4.14}Login-siden}{15}
+\contentsline {subsubsection}{\numberline {2.4.15}Registrerinssiden}{16}
+\contentsline {subsection}{\numberline {2.5}Andre scripts}{18}
+\contentsline {subsubsection}{\numberline {2.5.1}util.php}{18}
+\contentsline {subsubsection}{\numberline {2.5.2}config.php og install.php}{18}
+\contentsline {subsubsection}{\numberline {2.5.3}auth.php}{18}
+\contentsline {subsubsection}{\numberline {2.5.4}logout.php}{18}
+\contentsline {subsubsection}{\numberline {2.5.5}connect.php}{18}
+\contentsline {section}{\numberline {3}Afpr\IeC {\o }vning af siden}{18}
+\contentsline {subsection}{\numberline {3.1}Typiske problemer}{19}

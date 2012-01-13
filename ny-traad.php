@@ -14,7 +14,7 @@ require_once('auth.php');
 			$checkthread = 'SELECT name FROM threads WHERE name = "'.$overskrift.'";';//tjekker om kategorien er blevet oprette før
 			$checkname = mysql_query($checkthread) or die(mysql_error());
 			if(mysql_num_rows($checkname) >0){
-				header('Location: redigertraad.php?error=1');
+				header('Location: ny-traad.php?error=1');
 				exit;
 			}
 			$sql="INSERT INTO threads (name, description, foraID, userID)

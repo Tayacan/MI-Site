@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.7)  12 JAN 2012 14:38
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.7)  13 JAN 2012 09:21
 entering extended mode
  %&-line parsing enabled.
 **miforum.tex
@@ -376,59 +376,70 @@ File: ot1txtt.fd 2000/12/15 v3.1
 File: mi01.png Graphic file (type png)
 
 <use mi01.png> (./MIForumCode/ex05.htm [7 <./mi01.png (PNG copy)>])
+Overfull \hbox (16.42874pt too wide) in paragraph at lines 131--131
+\OT1/cmr/bx/n/10 redcat.php, re-di-ger-forum.php, redcatque-ry.php, red-foraque
+-ry.php 
+ []
+
 <mi02.png, id=37, 692.5875pt x 542.025pt>
 File: mi02.png Graphic file (type png)
  <use mi02.png>
 <mi11.png, id=38, 650.43pt x 286.06876pt>
 File: mi11.png Graphic file (type png)
- <use mi11.png> [8 <./mi02.png (PNG copy)>] <mi12.png, id=42, 642.4pt x 595.223
-75pt>
+ <use mi11.png> [8 <./mi02.png (PNG copy)>] <mi16.png, id=42, 693.59125pt x 297
+.11pt>
+File: mi16.png Graphic file (type png)
+ <use mi16.png>
+<mi12.png, id=43, 642.4pt x 595.22375pt>
 File: mi12.png Graphic file (type png)
- <use mi12.png> [9 <./mi11.png (PNG copy)>] <mi05.png, id=46, 662.475pt x 207.7
-7625pt>
-File: mi05.png Graphic file (type png)
- <use mi05.png> [10 <./mi12.png (PNG copy)> <./mi05.png (PNG copy)>] (./MIForum
-Code/ex01.php)
-<mi10.png, id=50, 661.47125pt x 357.335pt>
-File: mi10.png Graphic file (type png)
- <use mi10.png>
-(./MIForumCode/ex02.php [11 <./mi10.png (PNG copy)>])
-<mi04.png, id=54, 692.5875pt x 449.68pt>
-File: mi04.png Graphic file (type png)
- <use mi04.png> [12 <./mi04.png (PNG copy)>] (./MIForumCode/ex03.js) [13] <mi07
-.png, id=62, 287.0725pt x 181.67876pt>
-File: mi07.png Graphic file (type png)
+ <use mi12.png> [9 <./mi11.png (PNG copy)> <./mi16.png (PNG copy)>] <mi17.png, 
+id=47, 671.50874pt x 522.95375pt>
+File: mi17.png Graphic file (type png)
 
-<use mi07.png> <mi09.png, id=63, 306.14375pt x 219.82124pt>
+<use mi17.png> [10 <./mi12.png (PNG copy)>]
+<mi05.png, id=51, 662.475pt x 207.77625pt>
+File: mi05.png Graphic file (type png)
+ <use mi05.png> [11 <./mi17.png (PNG copy)>] (./MIForumCode/ex01.php) <mi10.png
+, id=55, 661.47125pt x 357.335pt>
+File: mi10.png Graphic file (type png)
+
+<use mi10.png> (./MIForumCode/ex02.php [12 <./mi05.png (PNG copy)> <./mi10.png 
+(PNG copy)>]) <mi04.png, id=59, 692.5875pt x 449.68pt>
+File: mi04.png Graphic file (type png)
+ <use mi04.png> [13]
+(./MIForumCode/ex03.js) [14 <./mi04.png (PNG copy)>]
+<mi07.png, id=67, 287.0725pt x 181.67876pt>
+File: mi07.png Graphic file (type png)
+ <use mi07.png>
+<mi09.png, id=68, 306.14375pt x 219.82124pt>
 File: mi09.png Graphic file (type png)
- <use mi09.png>
-(./MIForumCode/ex08.php) [14 <./mi07.png (PNG copy)> <./mi09.png (PNG copy)>]
-<mi08.png, id=67, 334.24875pt x 460.72125pt>
+ <use mi09.png> [15 <./mi07.png (PNG copy)>] (./MIForumCode/ex08.php)
+<mi08.png, id=72, 334.24875pt x 460.72125pt>
 File: mi08.png Graphic file (type png)
- <use mi08.png>
-(./MIForumCode/ex06.php) [15 <./mi08.png (PNG copy)>] (./MIForumCode/ex07.php)
-[16] (./miforum.aux) ) 
+ <use mi08.png> [16 <./mi09.png (PNG copy)>] (./MIForumCode/ex06.php) (./MIForu
+mCode/ex07.php) [17 <./mi08.png (PNG copy)>] [18] [19] (./miforum.aux) ) 
 Here is how much of TeX's memory you used:
- 3199 strings out of 493848
- 39987 string characters out of 1152823
- 206139 words of memory out of 3000000
- 6432 multiletter control sequences out of 15000+50000
+ 3209 strings out of 493848
+ 40105 string characters out of 1152823
+ 219139 words of memory out of 3000000
+ 6440 multiletter control sequences out of 15000+50000
  9400 words of font info for 33 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  26i,6n,32p,768b,1587s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
-cmbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/
-texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texliv
-e/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type
-1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/ams
-fonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr9
-.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
-share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf
--texlive/fonts/type1/public/txfonts/txtt.pfb>
-Output written on miforum.pdf (16 pages, 389120 bytes).
+</usr/s
+hare/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-
+texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fon
+ts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-texlive/fonts/type1/pub
+lic/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts
+/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pf
+b></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share
+/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-texliv
+e/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/typ
+e1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-texlive/fonts/type1/public/t
+xfonts/txtt.pfb>
+Output written on miforum.pdf (19 pages, 546213 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
+ 121 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
