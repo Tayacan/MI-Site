@@ -1,7 +1,7 @@
 <?php
 	require_once('connect.php');
 	require_once('util.php'); //To make sure that util.php is only required once
-	require_once('auth.php');
+	//require_once('auth.php');
 	
 	top();
 	
@@ -47,10 +47,15 @@
 			if($isAdmin == 1){
 				?>
 				<td>
+				<?php
+				if($row['isAdmin'] != 1) {
+				?>
 					<form action="users.php" method="post">
-						<input type="hidden" name="userId" value="<?php echo $row['userID']; ?>"/>
-						<input type="submit" value="makeAdmin"/>
+						<input type="hidden" name="userId" 
+							value="<?php echo $row['userID']; ?>"/>
+						<input type="submit" value="Make Admin"/>
 					</form>
+				<? } ?>
 				</td>
 				<?php
 			}
