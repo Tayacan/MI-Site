@@ -235,7 +235,7 @@ Hvis input nu \emph{ikke} er gyldigt, sender scriptet os tilbage til registrerin
 \section{Afprøvning af siden}
 Vi har under arbejdet med siden afprøvet den konstant. Jo mere man laver mellem hver afprøvning, jo sværere er fejlene at finde, så hvis vi kan lave en lille ting og sikre os at det virker, og så bruge den lille ting til at bygge noget større, er det bedst. For eksempel starter man måske med at sikre at man får fat i de rigtige værdier fra sin database ved bare at printe dem ud, inden man begynder at vise dem pænt - på den måde ved man at det er visningen der er gået galt hvis der pludselig ikke dukker noget op på skærmen.
 
-Vi har eksperimenteret med alle former for manglende og korrupt input vi kunne komme i tanke om, bl.a. html tags, PHP kode og SQL injections, og mener efterhånden at have sikret vores side mod alle angreb fra den front. Ud over det bruger vi $\$$$\_$POST frem for $\$$$\_$REQUEST når vi skal bruge variable fra POST-array'et, så brugere ikke kan taste interessante ting i URL'en.
+Vi har eksperimenteret med alle former for manglende og korrupt input vi kunne komme i tanke om, bl.a. html tags, PHP kode og SQL injections, og mener efterhånden at have sikret vores side mod alle angreb fra den front. Ud over det bruger vi $\$$$\_$POST frem for \$\_REQUEST når vi skal bruge variable fra POST-array'et, så brugere ikke kan taste interessante ting i URL'en.
 
 \subsection{Typiske problemer}
 Dette er listen over de problemer vi blev ved med at løbe ind i gennem arbejdet med siden. De kunne være nyttige at huske på til fremtidige projekter.

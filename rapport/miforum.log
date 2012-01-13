@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.7)  12 JAN 2012 14:20
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.7)  12 JAN 2012 14:38
 entering extended mode
  %&-line parsing enabled.
 **miforum.tex
@@ -387,16 +387,16 @@ File: mi12.png Graphic file (type png)
  <use mi12.png> [9 <./mi11.png (PNG copy)>] <mi05.png, id=46, 662.475pt x 207.7
 7625pt>
 File: mi05.png Graphic file (type png)
- <use mi05.png>
-(./MIForumCode/ex01.php [10 <./mi12.png (PNG copy)> <./mi05.png (PNG copy)>])
+ <use mi05.png> [10 <./mi12.png (PNG copy)> <./mi05.png (PNG copy)>] (./MIForum
+Code/ex01.php)
 <mi10.png, id=50, 661.47125pt x 357.335pt>
 File: mi10.png Graphic file (type png)
  <use mi10.png>
 (./MIForumCode/ex02.php [11 <./mi10.png (PNG copy)>])
 <mi04.png, id=54, 692.5875pt x 449.68pt>
 File: mi04.png Graphic file (type png)
- <use mi04.png> (./MIForumCode/ex03.js
-[12 <./mi04.png (PNG copy)>]) [13] <mi07.png, id=62, 287.0725pt x 181.67876pt>
+ <use mi04.png> [12 <./mi04.png (PNG copy)>] (./MIForumCode/ex03.js) [13] <mi07
+.png, id=62, 287.0725pt x 181.67876pt>
 File: mi07.png Graphic file (type png)
 
 <use mi07.png> <mi09.png, id=63, 306.14375pt x 219.82124pt>
@@ -406,7 +406,7 @@ File: mi09.png Graphic file (type png)
 <mi08.png, id=67, 334.24875pt x 460.72125pt>
 File: mi08.png Graphic file (type png)
  <use mi08.png>
-(./MIForumCode/ex06.php) (./MIForumCode/ex07.php [15 <./mi08.png (PNG copy)>])
+(./MIForumCode/ex06.php) [15 <./mi08.png (PNG copy)>] (./MIForumCode/ex07.php)
 [16] (./miforum.aux) ) 
 Here is how much of TeX's memory you used:
  3199 strings out of 493848
@@ -426,7 +426,7 @@ fonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr9
 .pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
 share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf
 -texlive/fonts/type1/public/txfonts/txtt.pfb>
-Output written on miforum.pdf (16 pages, 388938 bytes).
+Output written on miforum.pdf (16 pages, 389120 bytes).
 PDF statistics:
  109 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
