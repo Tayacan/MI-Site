@@ -96,7 +96,7 @@ MI Forum består af en hel del sider. Alle sider som brugere kommer i nærheden 
 
 Alle sider er skrevet i en blanding af xhtml, PHP, MySQL og JavaScript.
 
-\subsubsection{Forside}
+\subsubsection[Forside]{Forside - index.php}
 
 Forsiden er hvad brugeren ser når han går ind på vores side. Her skal være to bokse, en for artikler og en for forummet, som viser den nyeste aktivitet. Forum-boksen skal stå øverst, da vi regner med at det er her der oftest vil være sket noget nyt. Man kan altid komme tilbage til forsiden ved at klikke på knappen 'Forside' i navigationsbaren.
 
@@ -104,7 +104,7 @@ Hver aktivitet beskrevet i boksene skal være et link til den pågældende forum
 
 De fine bokse der viser den seneste aktivitet fungerer ved hjælp af et simpelt SQL udtræk som finder de artikler og forum-posts med højeste ID. Herefter bliver tekst-længden skåret ned, en smule JavaScript der sørger for at de relevante bbcode tags bliver erstattet med html. Desuden bliver der kørt nogle regex'es for at fjerne kode-tags, da de fylder alt for meget til at have stående på forsiden.
 
-\subsubsection{Forum-forsiden}
+\subsubsection[Forum-forsiden]{Forum-forsiden - forum.php}
 Forummet er organiseret i kategorier, fora, tråde og posts. En kategori er et overordnet emne, fx 'Programmering' eller 'Rollespil'. Under hver kategori kan man så have fora - under Programmerings-kategorien kunne man for eksempel have fora for forskellige programmeringssprog. I et fora kan man så have tråde, som brugerne kan oprette, med emner som for eksempel 'Hjælp med strcpy() funktionen'. Brugere kan så besvare tråde med posts.
 
 \includegraphics[width=100mm]{mi06.png}
@@ -119,7 +119,7 @@ Forum-forsiden bruger et simpelt SQL udtræk fra kategori-databasen, som den sor
 
 Vi skriver et @ foran sessions-variablen for at fortælle PHP at den ikke skal sende warnings hvis variablen ikke findes. Den pæne måde at gøre det på er at tjekke om variablen er sat først, men det her har samme effekt.
 
-\subsubsection{Adminmenuen}
+\subsubsection[Adminmenuen]{Adminmenuen - adminmenu.php}
 Her kan man redigere, oprette og slette fora og kategorier. Selve admin-menuens forside viser en liste af alle kategorierne, og et link med teksten 'Opret kategori', som fører til 'Opret kategori'-siden. Ud for hver kategori er der en slet-knap. Klikker man på slet-knappen, popper der en lille boks op og spørger om man er sikker på at man vil slette en hel kategori. Klikker man OK bliver kategorien og alle tilhørende fora, tråde og posts slettet. Klikker man på en kategori kommer man til 'Rediger kategori'-siden. 
 
 \includegraphics[width=100mm]{mi01.png}
@@ -128,24 +128,26 @@ Siden fungerer nogenlunde som forum-forsiden - i stedet for at lave pæne bokse,
 
 \lstinputlisting{MIForumCode/ex05.htm}
 
-\subsubsection{Rediger kategori og -forum siderne}
+\subsubsection[Rediger kategori og -forum siderne]{Rediger kategori og -forum siderne \\redcat.php, redigerforum.php, redcatquery.php, redforaquery.php}
 Disse to sider er ret så ens - rediger kategori-siden giver mulighed for at ændre en kategori's navn og beskrivelse, samt oprette, redigere og slette fora der tilhører denne kategori. Rediger forum-siden giver mulighed for at redigere navn og beskrivelse for fora.
 
 \includegraphics[width=100mm]{mi02.png}
 
 Disse sider bruger samme tekstredigering og næsten samme SQL som siderne for at oprette kategorier og fora. Forskellen er at vi her trækker det gamle indhold ud af databasen først, og skriver det i tekst-boksene.
 
-\subsubsection{Vis kategori}
+\subsubsection[Vis kategori]{Vis kategori - visfora.php}
 Når man, på forum-forsiden, klikker på en kategori, kommer man til en side der viser en oversigt over alle fora i den pågældende kategori. 
 
 \includegraphics[width=100mm]{mi11.png}
 
 Det er den samme PHP-fil der viser alle kategorier, den finder så de rette fora ud fra kategoriens ID, som sendes via $\$\_$GET-array'et. Vi bruger et SQL-udtræk til at hente alle fora hvor kategori-ID'et matcher, og viser dem med de nyeste først, på præcis samme måde som med kategorierne på forum-forsiden.
 
-\subsubsection{Vis fora}
+\subsubsection[Vis fora]{Vis fora - vistraade.php}
 Foraer bliver vist meget på samme måde som kategorier - en liste af alle tråde i det pågældende fora, sorteret med de nyeste først. Forskellen er at brugere her har muligheden for at oprette tråde.
 
-\subsubsection{Vis tråd}
+\includegraphics[width=100mm]{mi16.png}
+
+\subsubsection[Vis tråd]{Vis tråd - viewThread.php}
 Når man, på Vis Fora siden, klikker på en af de viste tråde, kommer man til denne side. Her vises først titlen og den tekst tråd-staren skrev, derefter alle de posts der er skrevet i tråden. Ved hver post vises navnet på den bruger der har skrevet den.
 
 \includegraphics[width=100mm]{mi12.png}
@@ -154,7 +156,19 @@ Nederst på siden vises der en Tilbage-knap som fører til Vis Fora siden, og, h
 
 Siden fungerer ved hjælp af to queries - et der finder åbningsposten i threads-tabellen, og et der finder de resterende posts i post-tabellen. Posts vises vha. et while-loop, som udskriver en bunke javascript der sørger for at formatere teksten rigtigt.
 
-\subsubsection{Artikel-forsiden}
+\subsubsection[Opret tråd]{Opret tråd - oprettraad.php, ny-traad.php}
+
+Denne side kommer man til ved at klikke på linket 'Opret tråd' på Vis fora-siden. Her kan man skrive et nyt emne på forummet. Det foregår ved hjælp af samme JavaScript text editor som til artikel-siden.
+
+\includegraphics[width=100mm]{mi17.png}
+
+Text editoren kan bl.a. lave [code][/code] tags, som resulterer i at den tekst der står imellem vil blive stillet op med en monospace font og farvelagt alt efter hvilket sprog det er. Det gør det nemt at bruge forummet til at diskutere programmerings-problemer ved simpelthen at skrive den problematiske kode på denne måde.
+
+\subsubsection[Svar på tråd]{Svar på tråd - writePost.php, createPost.php}
+
+Denne side virker præcis som Opret tråd-siden, med den undtagelse at man ikke kan skrive en titel. Den bruges til at besvare tråde, og hvad der skrives her havner i post-tabellen i vores database, hvor det kan identificeres ved trådens ID.
+
+\subsubsection[Artikel-forsiden]{Artikel-forsiden - articles.php}
 Når man klikker på knappen 'Artikler' i navigations-baren kommer man til denne side. Her er alle artikler listet ved navn, og man kan klikke på dem for at læse artiklen. Nederst på siden er der et link - hvis man er logget ind står der 'Skriv ny artikel', og det fører til en side hvor man kan - hold fast - skrive en ny artikel! Hvis ikke man er logget ind, står der 'Log ind for at skrive en ny artikel', og linket fører til login-siden.
 
 \includegraphics[width=100mm]{mi05.png}
@@ -163,7 +177,7 @@ Siden fungerer med et SQL query der henter alle artikler fra databasen og viser 
 
 \lstinputlisting{MIForumCode/ex01.php}
 
-\subsubsection{Vis artikel}
+\subsubsection[Vis artikel]{Vis artikel - viewArticle.php}
 Dette er den side man bliver taget til når man klikker på en artikel på Artikel-forsiden. Her vises den pågældende artikel med titel og forfatter efterfulgt af hele teksten. Hvis man er logget ind som den bruger der har oprettet artiklen, kan man redigere eller slette den ved hjælp af to links i bunden af siden.
 
 \includegraphics[width=100mm]{mi10.png}
@@ -174,7 +188,7 @@ Siden fungerer ved at kigge i databasen efter en artikel med det ID som er angiv
 
 Dette script involverer, som kan ses i ovenstående kode-listing, et grimt hack hvor PHP udskriver JavaScript. Det er nødvendigt for at kunne behandle vores hjemmelavede bbcodes og formatere koden pænt.
 
-\subsubsection{Skriv artikel}
+\subsubsection[Skriv artikel]{Skriv artikel - writeArticle.php, createArticle.php}
 Denne side giver mulighed for at skrive nye artikler til siden. De bliver så vist under artikel-sektionend forside, og på forsiden når de er nye. Den fungerer ved hjælp af en text-editor skrevet i JavaScript. Dette giver mulighed for at bruge nogle hjemmelaved bbcodes, enten ved at indtaste dem eller ved at trykke på knapperne som findes ovenfor og til højre for textboksen.
 
 \includegraphics[width=100mm]{mi04.png}
@@ -185,10 +199,10 @@ Selve det JavaScript det sørger for at text-editoren virker er for langt til at
 
 Den deler teksten i tre dele, sætter de angivne tags ind og sætter det hele sammen til en lang string igen. Bemærk den IE-specifikke kode - IE har ikke nogen funktion for at finde start og slut på en markering, så man er nød til at beregne placeringen ud fra længen af den markerede tekst, og så sætte de to variable manuelt. Derefter kan man fortsætte som normalt.
 
-\subsubsection{Rediger artikel}
+\subsubsection[Rediger artikel]{Rediger artikel - editArticle.php, deleteArticle.php}
 Denne side fungerer mere eller mindre som Skriv artikel, med den undtagelse af at den henter den gamle tekst og titel fra databasen først, og at den bruger UPDATE frem for INSERT INTO. Desuden er den kun tilgængelig hvis man er logget ind som den bruger der har skrevet artiklen eller en admin.
 
-\subsubsection{Login-siden}
+\subsubsection[Login-siden]{Login-siden - login.php, loginBackend.php}
 Dette er stedet hvor man logger ind som bruger. Man kan komme herhen ved at klikke på knappen 'Log ind' i navigationsbaren, eller via et af de mange links som findes på steder hvor vi regner med at det er nyttigt at logge ind, så som artikel-forsiden hvor man kan logge ind for at skrive en ny artikel.
 
 \begin{center}
@@ -211,7 +225,7 @@ Bemærk at vi kører md5 \emph{efter} at have kørt mysql$\_$real$\_$escape$\_$s
 
 Hvis man logges ind successfuldt, redirectes man til index-siden. Ellers bliver man sendt tilbage til login-siden med en fejlkode - denne metode vil blive beskrevet nærmere under afsnittet om registreringssiden.
 
-\subsubsection{Registreringssiden}
+\subsubsection[Registrerinssiden]{Registreringssiden - register.php, registerBackend.php}
 Her kan nye brugere registrere sig. Dette foregår ved at udfylde en række felter med ting som brugernavn, løsen, email, navn m.v. Der er desuden en knap med teksten 'Registrer', hvor brugeren kan klikke når hun har udfyldt alle felter.
 
 \begin{center}
@@ -236,19 +250,41 @@ Hvis input nu \emph{ikke} er gyldigt, sender scriptet os tilbage til registrerin
 Her kan man se brugere, og hvis man er admin kan man gøre andre til admins.
 
 \begin{center}
-\emph{Her skal være billeder af admin og ikke admin liste. (Billede mi14 og mi15)}
+\includegraphics[width=100mm]{mi1415.png}
 \end{center}
-
+Øverst vises tabellen for en almindelig bruger, eller hvis man ikke er logget ind, nederst ses tabellen for admin-brugere.
+\newline
+\newline
 Brugerne bliver vist ved at hive fat i dem med et MySQL-query der også ordner dem alfabetisk efter brugernavn. Herefter lægger vi dem ind i en tabel ved hjælp af et while-loop.
 
-For at få vist 'gør admin'-knappen
+For at få vist 'gør admin'-knappen bruger jeg følgende kode:
 
 \lstinputlisting{MIForumCode/ex09.php}
+
+Først tjekker vi om vedkommende der ser siden er admin eller ej, hvis vekommende ikke er, så bliver resten af koden bare ignoreret. Hvis vedkommende derimod er admin, tjekkes der om den bruger man er ved at placere i tabelen er admin. Hvis brugeren er det, bliver der bare lavetet tomt felt, da man jo ikke skal gøre en admin admin igen. Hvis brugeren derimod ikke er admin, oprettes en knap der gemmer brugerens userID. Således er hverknap linket til den retmæssige bruger, og når man klikker på knappen, gøres vekommende til admin.
+
+\subsection{Andre scripts}
+De følgende scripts har været af betydning for hele siden, men er ikke noget brugeren lægger mærke til.
+
+\subsubsection{util.php}
+Dette script indeholder en række funktioner som frit kan bruges overalt på siden. For eksempel bruges funktionerne top() og bottom() på alle sider, til at lave menuen, headeren, og bottom() til at afslutte tags. Alt synligt indhold skal placeres mellem kald til disse to funktioner.
+
+\subsubsection{config.php og install.php}
+Disse to scripts tager sig af at oprette og konfiguerere databasen. Man åbner install.php i sin browser, indtaster sit brugernavn og password til MySQL, og så opretter config.php automatisk en database samt en bruger som har fuld rettighed til at ændre i den, men kun den, database. På den måde sikres det at selv hvis siden skulle blive hacket, går det kun ud over den ene database.
+
+\subsubsection{auth.php}
+Dette script skal require's på alle sider som kræver at man er logget ind. Hvis en bruger som ikke er logget ind navigerer til en side hvor auth.php er med, vil browseren automatisk blive redirectet til login-formen.
+
+\subsubsection{logout.php}
+Dette er et script som log ud-knappen linker til. Det sørger for at slette alle sessionsvariable, og forsøger derefter at sende en til den side hvor man var da man loggede ud.
+
+\subsubsection{connect.php}
+Dette script står for at forbinde til databasen. Alle sider som skal have med databasen at gøre, behøver kun at include dette script for at have forbindelse.
 
 \section{Afprøvning af siden}
 Vi har under arbejdet med siden afprøvet den konstant. Jo mere man laver mellem hver afprøvning, jo sværere er fejlene at finde, så hvis vi kan lave en lille ting og sikre os at det virker, og så bruge den lille ting til at bygge noget større, er det bedst. For eksempel starter man måske med at sikre at man får fat i de rigtige værdier fra sin database ved bare at printe dem ud, inden man begynder at vise dem pænt - på den måde ved man at det er visningen der er gået galt hvis der pludselig ikke dukker noget op på skærmen.
 
-Vi har eksperimenteret med alle former for manglende og korrupt input vi kunne komme i tanke om, bl.a. html tags, PHP kode og SQL injections, og mener efterhånden at have sikret vores side mod alle angreb fra den front. Ud over det bruger vi $\$$$\_$POST frem for $\$$$\_$REQUEST når vi skal bruge variable fra POST-array'et, så brugere ikke kan taste interessante ting i URL'en.
+Vi har eksperimenteret med alle former for manglende og korrupt input vi kunne komme i tanke om, bl.a. html tags, PHP kode og SQL injections, og mener efterhånden at have sikret vores side mod alle angreb fra den front. Ud over det bruger vi $\$$$\_$POST frem for \$\_REQUEST når vi skal bruge variable fra POST-array'et, så brugere ikke kan taste interessante ting i URL'en.
 
 \subsection{Typiske problemer}
 Dette er listen over de problemer vi blev ved med at løbe ind i gennem arbejdet med siden. De kunne være nyttige at huske på til fremtidige projekter.

@@ -7,7 +7,7 @@
         	<form action="users.php" method="post">
                 	<input type="hidden" name="userId" 
                         	value="<?php echo $row['userID']; ?>"/>
-                        <input type="submit" value="Gør til admin"/>
+                        <input type="submit" value="Gor til admin"/>
                 </form>
          <? } ?>
          </td>
