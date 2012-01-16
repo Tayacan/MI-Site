@@ -249,6 +249,23 @@ Hvis input nu \emph{ikke} er gyldigt, sender scriptet os tilbage til registrerin
 
 \lstinputlisting{MIForumCode/ex07.php}
 
+\subsubsection{Brugerliste}
+Her kan man se brugere, og hvis man er admin kan man gøre andre til admins.
+
+\begin{center}
+\includegraphics[width=100mm]{mi1415.png}
+\end{center}
+Øverst vises tabellen for en almindelig bruger, eller hvis man ikke er logget ind, nederst ses tabellen for admin-brugere.
+\newline
+\newline
+Brugerne bliver vist ved at hive fat i dem med et MySQL-query der også ordner dem alfabetisk efter brugernavn. Herefter lægger vi dem ind i en tabel ved hjælp af et while-loop.
+
+For at få vist 'gør admin'-knappen bruger jeg følgende kode:
+
+\lstinputlisting{MIForumCode/ex09.php}
+
+Først tjekker vi om vedkommende der ser siden er admin eller ej, hvis vekommende ikke er, så bliver resten af koden bare ignoreret. Hvis vedkommende derimod er admin, tjekkes der om den bruger man er ved at placere i tabelen er admin. Hvis brugeren er det, bliver der bare lavetet tomt felt, da man jo ikke skal gøre en admin admin igen. Hvis brugeren derimod ikke er admin, oprettes en knap der gemmer brugerens userID. Således er hver knap linket til den retmæssige bruger, og når man klikker på knappen, gøres vekommende til admin.
+
 \subsection{Andre scripts}
 De følgende scripts har været af betydning for hele siden, men er ikke noget brugeren lægger mærke til.
 

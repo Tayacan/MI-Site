@@ -1,5 +1,6 @@
 \select@language {danish}
 \contentsline {section}{\numberline {1}Projektbeskrivelse}{4}
+\contentsline {subsection}{\numberline {1.1}E/R-diagram}{4}
 \contentsline {section}{\numberline {2}Spec - MI Forum}{4}
 \contentsline {subsection}{\numberline {2.1}Overblik}{4}
 \contentsline {subsubsection}{\numberline {2.1.1}Software}{4}
@@ -21,11 +22,12 @@
 \contentsline {subsubsection}{\numberline {2.4.13}Rediger artikel}{15}
 \contentsline {subsubsection}{\numberline {2.4.14}Login-siden}{15}
 \contentsline {subsubsection}{\numberline {2.4.15}Registrerinssiden}{16}
+\contentsline {subsubsection}{\numberline {2.4.16}Brugerliste}{18}
 \contentsline {subsection}{\numberline {2.5}Andre scripts}{18}
-\contentsline {subsubsection}{\numberline {2.5.1}util.php}{18}
-\contentsline {subsubsection}{\numberline {2.5.2}config.php og install.php}{18}
-\contentsline {subsubsection}{\numberline {2.5.3}auth.php}{18}
-\contentsline {subsubsection}{\numberline {2.5.4}logout.php}{18}
-\contentsline {subsubsection}{\numberline {2.5.5}connect.php}{18}
-\contentsline {section}{\numberline {3}Afpr\IeC {\o }vning af siden}{18}
-\contentsline {subsection}{\numberline {3.1}Typiske problemer}{19}
+\contentsline {subsubsection}{\numberline {2.5.1}util.php}{19}
+\contentsline {subsubsection}{\numberline {2.5.2}config.php og install.php}{19}
+\contentsline {subsubsection}{\numberline {2.5.3}auth.php}{19}
+\contentsline {subsubsection}{\numberline {2.5.4}logout.php}{19}
+\contentsline {subsubsection}{\numberline {2.5.5}connect.php}{19}
+\contentsline {section}{\numberline {3}Afpr\IeC {\o }vning af siden}{19}
+\contentsline {subsection}{\numberline {3.1}Typiske problemer}{20}

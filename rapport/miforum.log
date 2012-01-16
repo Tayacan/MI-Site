@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.7)  16 JAN 2012 14:34
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.7)  16 JAN 2012 14:38
 entering extended mode
  %&-line parsing enabled.
 **miforum.tex
@@ -348,26 +348,26 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./miforum.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 4.
+(Font)              <7> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 4.
+(Font)              <5> on input line 3.
 )
 \tf@toc=\write3
 \openout3 = `miforum.toc'.
 
 
 [3] [4]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 87.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 90.
  (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 87.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 90.
  [5]
 <mi06.png, id=26, 663.47874pt x 237.88875pt>
 File: mi06.png Graphic file (type png)
  <use mi06.png> [6 <./mi06.png (PNG copy)>]
-LaTeX Font Info:    Try loading font information for OT1+txtt on input line 118
+LaTeX Font Info:    Try loading font information for OT1+txtt on input line 121
 .
  (/usr/share/texmf-texlive/tex/latex/txfonts/ot1txtt.fd
 File: ot1txtt.fd 2000/12/15 v3.1
@@ -375,8 +375,8 @@ File: ot1txtt.fd 2000/12/15 v3.1
 (./MIForumCode/ex04.php) <mi01.png, id=30, 671.50874pt x 252.945pt>
 File: mi01.png Graphic file (type png)
 
-<use mi01.png> (./MIForumCode/ex05.htm [7 <./mi01.png (PNG copy)>])
-Overfull \hbox (16.42874pt too wide) in paragraph at lines 131--131
+<use mi01.png> [7 <./mi01.png (PNG copy)>] (./MIForumCode/ex05.htm)
+Overfull \hbox (16.42874pt too wide) in paragraph at lines 134--134
 \OT1/cmr/bx/n/10 redcat.php, re-di-ger-forum.php, redcatque-ry.php, red-foraque
 -ry.php 
  []
@@ -417,15 +417,23 @@ File: mi09.png Graphic file (type png)
 <mi08.png, id=72, 334.24875pt x 460.72125pt>
 File: mi08.png Graphic file (type png)
  <use mi08.png> [16 <./mi09.png (PNG copy)>] (./MIForumCode/ex06.php) (./MIForu
-mCode/ex07.php) [17 <./mi08.png (PNG copy)>] [18] [19] (./miforum.aux) ) 
+mCode/ex07.php) [17 <./mi08.png (PNG copy)>] <mi1415.png, id=79, 617.30624pt x 
+220.825pt>
+File: mi1415.png Graphic file (type png)
+ <use mi1415.png>
+Underfull \hbox (badness 10000) in paragraph at lines 258--262
+
+ []
+
+(./MIForumCode/ex09.php) [18 <./mi1415.png>] [19] [20] (./miforum.aux) ) 
 Here is how much of TeX's memory you used:
- 3209 strings out of 493848
- 40105 string characters out of 1152823
+ 3217 strings out of 493848
+ 40220 string characters out of 1152823
  219139 words of memory out of 3000000
- 6440 multiletter control sequences out of 15000+50000
+ 6444 multiletter control sequences out of 15000+50000
  9400 words of font info for 33 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 26i,6n,32p,768b,1587s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 26i,6n,32p,768b,1585s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/s
 hare/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-
 texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fon
@@ -437,9 +445,9 @@ b></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share
 e/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/typ
 e1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-texlive/fonts/type1/public/t
 xfonts/txtt.pfb>
-Output written on miforum.pdf (19 pages, 546200 bytes).
+Output written on miforum.pdf (20 pages, 589259 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
+ 127 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

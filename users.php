@@ -30,7 +30,7 @@
 			<td><b>Email:<b/></td>
 			<td><b>Admin:<b/></td>';
 			if($isAdmin == 1){
-				echo'<td><b>G�r til admin</b></td>';
+				echo'<td><b>Gør til admin</b></td>';
 			}
 	echo'</tr>';
 	while($row=mysql_fetch_array($result)){
@@ -53,7 +53,7 @@
 					<form action="users.php" method="post">
 						<input type="hidden" name="userId" 
 							value="<?php echo $row['userID']; ?>"/>
-						<input type="submit" value="Make Admin"/>
+						<input type="submit" value="Gør til admin"/>
 					</form>
 				<? } ?>
 				</td>
