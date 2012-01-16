@@ -16,6 +16,9 @@
         frame=single,
         breaklines=true,
         breakatwhitespace=false
+	literate=	{æ}{{\ae}}1 % Æ, ø og å i listings
+			{ø}{{\o}}1
+			{å}{{\aa}}1
 }
 
 \renewcommand{\ttdefault}{txtt}
@@ -50,6 +53,25 @@ Som en 4-mands gruppe blev vi nød til at dele arbejdet op (mest fordi vi fik be
 
 \subsection{E/R-diagram}
 For at få et overblik over hvad vores database skulle indeholde, lavede vi et E/R-diagram.
+
+\includegraphics[width=120mm]{er-diag.jpg}
+
+Når man snakker om databaser findes der en række normalformer. En database kan være på første(1.), anden(2.) eller tredje(3.) normalform\footnote{Ifølge Datalogi bogen af Martin Damhus} med hensyn til relationer og opbygning af tabeller. Når man laver en database vil man helst have at den skal være på 3. normalform, da man så undgår at data gentages.
+
+\paragraph{1. Normalform}
+har to krav, for det første skal hver tabel have en primær nøgle, da man ellers ikke kan slå op i en tabel. Andet krav er at alle attributter er en-værdi attributter, man må ikke have nogle sammensatte attributter da det bare gør det sværere at få fat i dele af attributter eller ændre i dem.
+
+Dette opfylder vores database, men der er også tale om at ingen attributter må have værdien NULL dette kaldes for stærk 1.normalform\footnote{Ifølge Datalogi bogen af Martin Damhus.}. Vi har valgt at man gerne må have Null værdier i nogle situationer fordi vi nogle steder ikke syntes det er nødvendigt at man behøver skrive f. eks en beskrivelse til en kategori.
+
+\paragraph{2. Normalform}
+har først og fremmest det krav at databasen er i 1. normalform. Derudover skal der enten ikke være nogen sammensatte kandidatnøgler(som er en nøgle bestående af to eller flere attributter), eller at der er en eller flere sammensatte kandidatnøgler, men at de attributter der afhænger af kandidatnøglen afhænger af hele den sammensatte nøgle og ikke kun noget af den. Ellers vil der kunne opstå problemer som at noget data indtastes 2 gange og skriver man forkert kan der opstå noget være rod.
+
+Vores tabel opfylder anden normalform da vi ikke har nogen sammensatte kandidatnøgler.
+
+\paragraph{3. Normalform}
+har kun, udover selvfølgelig at være på 2. normalform, det krav, at ingen attributter indirekte afhænger af en kandidatnøgle. Det kan dog løse ved at splitte tabellen op i 2, der begge er i 3. normalform.
+
+Dette opfylder vores tabel også. Vi har dermed opfyldt alle normalformer(med undtagelse af stærk 1. normalform).
 
 \section{Spec - MI Forum}
 
@@ -116,20 +138,43 @@ Forum-forsiden findes ved at klikke på knappen 'Forum' i navigationsbaren. Her 
 
 Hvis man er logget ind som en bruger med admin-rettigheder, vises der, ovenfor kategorierne, en knap med teksten 'Gå til admin menu'. Den linker til adminmenuen, hvor man kan redigere i kategorier og fora.
 
-Forum-forsiden bruger et simpelt SQL udtræk fra kategori-databasen, som den sorterer efter categoryID så de nyeste kategorier vises først. Den tjekker om man er logget ind som administrator ved at hente isAdmin-feltet fra databasen for den bruger hvis ID svarer til det ID der er gemt i $\$$$\_$SESSION['LoggedIn'], og se om det er 1. I kode:
+Forum-forsiden bruger et simpelt SQL udtræk fra kategori-databasen, som den sorterer efter categoryID så de nyeste kategorier vises først. Den tjekker om man er logget ind som administrator ved at hente isAdmin-feltet fra databasen for den bruger hvis ID svarer til det ID der er gemt i $\$$$\_$SESSION['LoggedIn']. Hvis værdien i isAdmin feltet er == 1, så er brugeren administrator (se linje 4):
 
 \lstinputlisting{MIForumCode/ex04.php}
 
 Vi skriver et @ foran sessions-variablen for at fortælle PHP at den ikke skal sende warnings hvis variablen ikke findes. Den pæne måde at gøre det på er at tjekke om variablen er sat først, men det her har samme effekt.
 
 \subsubsection[Adminmenuen]{Adminmenuen - adminmenu.php}
-Her kan man redigere, oprette og slette fora og kategorier. Selve admin-menuens forside viser en liste af alle kategorierne, og et link med teksten 'Opret kategori', som fører til 'Opret kategori'-siden. Ud for hver kategori er der en slet-knap. Klikker man på slet-knappen, popper der en lille boks op og spørger om man er sikker på at man vil slette en hel kategori. Klikker man OK bliver kategorien og alle tilhørende fora, tråde og posts slettet. Klikker man på en kategori kommer man til 'Rediger kategori'-siden. 
+Admin menuen og dens undersider er lavet på en brugervenlig måde, så man kan fortage admin relateret ændringer (med undtagelse at gøre brugere til admin) som at oprette, redigerer og slette kategorier eller fora. På alle admin-sider tjekkes der om brugeren er logget ind som admin, før de får lov til at se siden.
+
+Disse sider er ”bag facaden” hvilket vil sige at der her ikke gøres så meget ud af bruger interfacet, men mere det funktionelle.
+
+HSelve admin-menuens forside viser en liste af alle kategorierne, og et link med teksten 'Opret kategori', som fører til 'Opret kategori'-siden. Ud for hver kategori er der en slet-knap. Klikker man på slet-knappen, popper der en lille boks op og spørger om man er sikker på at man vil slette en hel kategori. Klikker man OK bliver kategorien og alle tilhørende fora, tråde og posts slettet. Klikker man på en kategori kommer man til 'Rediger kategori'-siden. 
 
 \includegraphics[width=100mm]{mi01.png}
 
 Siden fungerer nogenlunde som forum-forsiden - i stedet for at lave pæne bokse, bliver hver kategori vist som et h3 element med en slet-knap til højre. Sletknappen er ikke et link, men kalder i stedet en JavaScript funktion som tager et ID som parameter. Funktionen laver et pop-up vindue som spørger om man er sikker på at man vil slette, og hvis man klikker OK, bliver window.location.href sat til den PHP-side der sørger for at slette kategorien.
 
 \lstinputlisting{MIForumCode/ex05.htm}
+
+\subsubsection[Opret kategori og -forum siderne]{Opret kategori og -forum siderne \\opretcat.php, newcat.php, opretforum.php, nyt-forum.php}
+Oprettelse af en ny kategori og et nyt forum foregår på samme måde, forskellen er at der er flere id’er der skal holdes styr på under oprettelse af et forum under en kategori, så man nemt kan finde den igen hvor den høre til.
+
+På siden kan man skrive en overskrift og en beskrivelse og trykke opret kategori. Klikker man på opret kategori knappen, så oprettes kategorien, medmindre man ikke skriver noget i overskriften eller forsøger at oprette en kategori som allerede findes af samme navn. En lignende fejl meddelelse, som er beskrevet mere detaljeret under registrering af bruger længere nede, vises så øverst på siden.
+
+\includegraphics[width=100mm]{mi18.png}
+
+Måden en kategori oprettes på er ved html attributten form action og input type= ”submit” som sender den indtastede data til en behandlingsside angivet i form action. (Se linje 2)
+
+\lstinputlisting{MIForumCode/ex10.htm}
+
+Til indtastning af overskrift bruges input type=”text” og til indtastning af beskrivelse bruges textarea hvor man angiver kolonner og række (cols and rows)
+Når man trykker på knappen opret kategori, sendes data gemt i variablerne overskrift og beskrivelse til siden newcat.php.
+
+\lstinputlisting{MIForumCode/ex11.php}
+
+Her bliver brugerind tastingen escapet og gemt i de samme variabel navne overskrift og beskrivelse, hvorefter de bliver indsat i tabellen ned sql koden INSERT INTO og så værdier. Se linje 4.
+Kategorien er nu oprettet.
 
 \subsubsection[Rediger kategori og -forum siderne]{Rediger kategori og -forum siderne \\redcat.php, redigerforum.php, redcatquery.php, redforaquery.php}
 Disse to sider er ret så ens - rediger kategori-siden giver mulighed for at ændre en kategori's navn og beskrivelse, samt oprette, redigere og slette fora der tilhører denne kategori. Rediger forum-siden giver mulighed for at redigere navn og beskrivelse for fora.

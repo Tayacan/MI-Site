@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.7)  16 JAN 2012 14:38
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.7)  16 JAN 2012 16:06
 entering extended mode
  %&-line parsing enabled.
 **miforum.tex
@@ -311,18 +311,18 @@ Package: listings 2007/02/22 1.4 (Carsten Heinz)
  (./miforum.aux)
 \openout1 = `miforum.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
 
 (/usr/share/texmf/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -339,11 +339,11 @@ LaTeX Font Info:    ... okay on input line 26.
 )
 \c@lstlisting=\count102
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 28.
+(Font)              <12> on input line 31.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 28.
+(Font)              <8> on input line 31.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 28.
+(Font)              <6> on input line 31.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./miforum.toc
@@ -356,98 +356,125 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout3 = `miforum.toc'.
 
 
-[3] [4]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 90.
+[3] <er-diag.jpg, id=18, 770.88pt x 377.91188pt>
+File: er-diag.jpg Graphic file (type jpg)
+ <use er-diag.jpg>
+Overfull \hbox (11.43306pt too wide) in paragraph at lines 57--58
+[][] 
+ []
+
+[4 <./er-diag.jpg>]
+Overfull \hbox (3.86177pt too wide) in paragraph at lines 67--68
+\OT1/cmr/m/n/10 form. Der-u-d-over skal der en-ten ik-ke v^^Z-re no-gen sam-men
+-sat-te kan-di-datn^^\gler(som
+ []
+
+
+Overfull \hbox (2.66733pt too wide) in paragraph at lines 74--75
+[]\OT1/cmr/m/n/10 Dette op-fyl-der vo-res ta-bel ogs^^Wa. Vi har der-med op-fyl
+dt al-le nor-mal-for-mer(med
+ []
+
+[5]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 112.
+
  (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 90.
- [5]
-<mi06.png, id=26, 663.47874pt x 237.88875pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 112.
+ [6]
+<mi06.png, id=32, 663.47874pt x 237.88875pt>
 File: mi06.png Graphic file (type png)
- <use mi06.png> [6 <./mi06.png (PNG copy)>]
-LaTeX Font Info:    Try loading font information for OT1+txtt on input line 121
+ <use mi06.png> [7]
+LaTeX Font Info:    Try loading font information for OT1+txtt on input line 143
 .
- (/usr/share/texmf-texlive/tex/latex/txfonts/ot1txtt.fd
+
+(/usr/share/texmf-texlive/tex/latex/txfonts/ot1txtt.fd
 File: ot1txtt.fd 2000/12/15 v3.1
-)
-(./MIForumCode/ex04.php) <mi01.png, id=30, 671.50874pt x 252.945pt>
+) (./MIForumCode/ex04.php) [8 <./mi06.png (PNG copy)>] <mi01.png, id=42, 671.50
+874pt x 252.945pt>
 File: mi01.png Graphic file (type png)
 
-<use mi01.png> [7 <./mi01.png (PNG copy)>] (./MIForumCode/ex05.htm)
-Overfull \hbox (16.42874pt too wide) in paragraph at lines 134--134
+<use mi01.png> (./MIForumCode/ex05.htm)
+<mi18.png, id=43, 653.44125pt x 283.0575pt>
+File: mi18.png Graphic file (type png)
+ <use mi18.png> [9 <./mi01.png (PNG copy)>] (./MIForumCode/ex10.htm) (./MIForum
+Code/ex11.php)
+Overfull \hbox (16.42874pt too wide) in paragraph at lines 179--179
 \OT1/cmr/bx/n/10 redcat.php, re-di-ger-forum.php, redcatque-ry.php, red-foraque
 -ry.php 
  []
 
-<mi02.png, id=37, 692.5875pt x 542.025pt>
+<mi02.png, id=47, 692.5875pt x 542.025pt> [10 <./mi18.png (PNG copy)>]
 File: mi02.png Graphic file (type png)
- <use mi02.png>
-<mi11.png, id=38, 650.43pt x 286.06876pt>
+
+<use mi02.png> <mi11.png, id=51, 650.43pt x 286.06876pt>
 File: mi11.png Graphic file (type png)
- <use mi11.png> [8 <./mi02.png (PNG copy)>] <mi16.png, id=42, 693.59125pt x 297
-.11pt>
+ <use mi11.png>
+[11 <./mi02.png (PNG copy)> <./mi11.png (PNG copy)>]
+<mi16.png, id=55, 693.59125pt x 297.11pt>
 File: mi16.png Graphic file (type png)
  <use mi16.png>
-<mi12.png, id=43, 642.4pt x 595.22375pt>
+<mi12.png, id=56, 642.4pt x 595.22375pt>
 File: mi12.png Graphic file (type png)
- <use mi12.png> [9 <./mi11.png (PNG copy)> <./mi16.png (PNG copy)>] <mi17.png, 
-id=47, 671.50874pt x 522.95375pt>
+ <use mi12.png> [12 <./mi16.png (PNG copy)> <./mi12.png (PNG copy)>] <mi17.png,
+ id=60, 671.50874pt x 522.95375pt>
 File: mi17.png Graphic file (type png)
 
-<use mi17.png> [10 <./mi12.png (PNG copy)>]
-<mi05.png, id=51, 662.475pt x 207.77625pt>
+<use mi17.png> [13 <./mi17.png (PNG copy)>]
+<mi05.png, id=65, 662.475pt x 207.77625pt>
 File: mi05.png Graphic file (type png)
- <use mi05.png> [11 <./mi17.png (PNG copy)>] (./MIForumCode/ex01.php) <mi10.png
-, id=55, 661.47125pt x 357.335pt>
+ <use mi05.png>
+(./MIForumCode/ex01.php) <mi10.png, id=66, 661.47125pt x 357.335pt>
 File: mi10.png Graphic file (type png)
 
-<use mi10.png> (./MIForumCode/ex02.php [12 <./mi05.png (PNG copy)> <./mi10.png 
-(PNG copy)>]) <mi04.png, id=59, 692.5875pt x 449.68pt>
+<use mi10.png> [14 <./mi05.png (PNG copy)> <./mi10.png (PNG copy)>]
+(./MIForumCode/ex02.php) <mi04.png, id=70, 692.5875pt x 449.68pt>
 File: mi04.png Graphic file (type png)
- <use mi04.png> [13]
-(./MIForumCode/ex03.js) [14 <./mi04.png (PNG copy)>]
-<mi07.png, id=67, 287.0725pt x 181.67876pt>
+
+<use mi04.png> [15] (./MIForumCode/ex03.js) [16 <./mi04.png (PNG copy)>]
+<mi07.png, id=77, 287.0725pt x 181.67876pt>
 File: mi07.png Graphic file (type png)
  <use mi07.png>
-<mi09.png, id=68, 306.14375pt x 219.82124pt>
+<mi09.png, id=78, 306.14375pt x 219.82124pt>
 File: mi09.png Graphic file (type png)
- <use mi09.png> [15 <./mi07.png (PNG copy)>] (./MIForumCode/ex08.php)
-<mi08.png, id=72, 334.24875pt x 460.72125pt>
+ <use mi09.png> [17 <./mi07.png (PNG copy)>] (./MIForumCode/ex08.php)
+<mi08.png, id=82, 334.24875pt x 460.72125pt>
 File: mi08.png Graphic file (type png)
- <use mi08.png> [16 <./mi09.png (PNG copy)>] (./MIForumCode/ex06.php) (./MIForu
-mCode/ex07.php) [17 <./mi08.png (PNG copy)>] <mi1415.png, id=79, 617.30624pt x 
+ <use mi08.png> [18 <./mi09.png (PNG copy)>] (./MIForumCode/ex06.php) (./MIForu
+mCode/ex07.php) [19 <./mi08.png (PNG copy)>] <mi1415.png, id=90, 617.30624pt x 
 220.825pt>
 File: mi1415.png Graphic file (type png)
  <use mi1415.png>
-Underfull \hbox (badness 10000) in paragraph at lines 258--262
+Underfull \hbox (badness 10000) in paragraph at lines 303--307
 
  []
 
-(./MIForumCode/ex09.php) [18 <./mi1415.png>] [19] [20] (./miforum.aux) ) 
+(./MIForumCode/ex09.php) [20 <./mi1415.png>] [21] [22] (./miforum.aux) ) 
 Here is how much of TeX's memory you used:
- 3217 strings out of 493848
- 40220 string characters out of 1152823
- 219139 words of memory out of 3000000
- 6444 multiletter control sequences out of 15000+50000
+ 3234 strings out of 493848
+ 40449 string characters out of 1152823
+ 235157 words of memory out of 3000000
+ 6452 multiletter control sequences out of 15000+50000
  9400 words of font info for 33 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 26i,6n,32p,768b,1585s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 26i,8n,32p,768b,1058s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/s
 hare/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-
 texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fon
 ts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-texlive/fonts/type1/pub
 lic/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts
 /cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pf
-b></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share
-/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-texliv
-e/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/typ
-e1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-texlive/fonts/type1/public/t
-xfonts/txtt.pfb>
-Output written on miforum.pdf (20 pages, 589259 bytes).
+b></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share
+/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texliv
+e/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1
+/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
+nts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti
+10.pfb></usr/share/texmf-texlive/fonts/type1/public/txfonts/txtt.pfb>
+Output written on miforum.pdf (22 pages, 781444 bytes).
 PDF statistics:
- 127 PDF objects out of 1000 (max. 8388607)
+ 143 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
