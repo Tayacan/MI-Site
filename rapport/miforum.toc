@@ -11,27 +11,27 @@
 \contentsline {subsection}{\numberline {2.3}Ikke-m\IeC {\r a}l}{6}
 \contentsline {subsection}{\numberline {2.4}Side-for-side specifikation}{7}
 \contentsline {subsubsection}{\numberline {2.4.1}Forside}{7}
-\contentsline {subsubsection}{\numberline {2.4.2}Forum-forsiden}{7}
-\contentsline {subsubsection}{\numberline {2.4.3}Adminmenuen}{8}
+\contentsline {subsubsection}{\numberline {2.4.2}Forum-forsiden}{8}
+\contentsline {subsubsection}{\numberline {2.4.3}Adminmenuen}{9}
 \contentsline {subsubsection}{\numberline {2.4.4}Opret kategori og -forum siderne}{9}
-\contentsline {subsubsection}{\numberline {2.4.5}Rediger kategori og -forum siderne}{10}
+\contentsline {subsubsection}{\numberline {2.4.5}Rediger kategori og -forum siderne}{11}
 \contentsline {subsubsection}{\numberline {2.4.6}Vis kategori}{11}
 \contentsline {subsubsection}{\numberline {2.4.7}Vis fora}{12}
 \contentsline {subsubsection}{\numberline {2.4.8}Vis tr\IeC {\r a}d}{12}
 \contentsline {subsubsection}{\numberline {2.4.9}Opret tr\IeC {\r a}d}{13}
-\contentsline {subsubsection}{\numberline {2.4.10}Svar p\IeC {\r a} tr\IeC {\r a}d}{13}
-\contentsline {subsubsection}{\numberline {2.4.11}Artikel-forsiden}{13}
-\contentsline {subsubsection}{\numberline {2.4.12}Vis artikel}{14}
-\contentsline {subsubsection}{\numberline {2.4.13}Skriv artikel}{15}
-\contentsline {subsubsection}{\numberline {2.4.14}Rediger artikel}{17}
-\contentsline {subsubsection}{\numberline {2.4.15}Login-siden}{17}
-\contentsline {subsubsection}{\numberline {2.4.16}Registrerinssiden}{18}
-\contentsline {subsubsection}{\numberline {2.4.17}Brugerliste}{20}
-\contentsline {subsection}{\numberline {2.5}Andre scripts}{20}
-\contentsline {subsubsection}{\numberline {2.5.1}util.php}{21}
-\contentsline {subsubsection}{\numberline {2.5.2}config.php og install.php}{21}
-\contentsline {subsubsection}{\numberline {2.5.3}auth.php}{21}
-\contentsline {subsubsection}{\numberline {2.5.4}logout.php}{21}
-\contentsline {subsubsection}{\numberline {2.5.5}connect.php}{21}
-\contentsline {section}{\numberline {3}Afpr\IeC {\o }vning af siden}{21}
-\contentsline {subsection}{\numberline {3.1}Typiske problemer}{22}
+\contentsline {subsubsection}{\numberline {2.4.10}Svar p\IeC {\r a} tr\IeC {\r a}d}{14}
+\contentsline {subsubsection}{\numberline {2.4.11}Artikel-forsiden}{14}
+\contentsline {subsubsection}{\numberline {2.4.12}Vis artikel}{15}
+\contentsline {subsubsection}{\numberline {2.4.13}Skriv artikel}{16}
+\contentsline {subsubsection}{\numberline {2.4.14}Rediger artikel}{18}
+\contentsline {subsubsection}{\numberline {2.4.15}Login-siden}{18}
+\contentsline {subsubsection}{\numberline {2.4.16}Registrerinssiden}{19}
+\contentsline {subsubsection}{\numberline {2.4.17}Brugerliste}{21}
+\contentsline {subsection}{\numberline {2.5}Andre scripts}{21}
+\contentsline {subsubsection}{\numberline {2.5.1}util.php}{22}
+\contentsline {subsubsection}{\numberline {2.5.2}config.php og install.php}{22}
+\contentsline {subsubsection}{\numberline {2.5.3}auth.php}{22}
+\contentsline {subsubsection}{\numberline {2.5.4}logout.php}{22}
+\contentsline {subsubsection}{\numberline {2.5.5}connect.php}{22}
+\contentsline {section}{\numberline {3}Afpr\IeC {\o }vning af siden}{22}
+\contentsline {subsection}{\numberline {3.1}Typiske problemer}{23}

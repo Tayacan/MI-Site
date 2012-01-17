@@ -49,7 +49,7 @@ Opgaven i dette projekt var at lave en e-handel – kort fortalt et webinterface
 Fiktive virksomheder er kedelige. De findes ikke. Man kan ikke bruge dem til noget. Man kan lave så mange spændende ting med PHP og databaser som kan bruges til alt muligt nyttigt, og vi skal lave noget fiktivt? Hvorfor?
 Vi brainstormede og kom op med ideen at lave et online forum for vores studieretning. Det kræver de samme – hvis ikke mere komplicerede – databaser som en e-handel, og det er en noget mere interessant opgave.
 
-Som en 4-mands gruppe blev vi nød til at dele arbejdet op (mest fordi vi fik besked på det). Simon og Jonas kom til at stå for at få forummet op og køre, Maya lavede de generelle funktioner der skal bruges på alle sider (forbind til databasen, layout-ting, menu, css) og et script til at oprette en fungerende database til siden. Sofie kom til at stå brugerdatabasen - login, autentificering, administration og den slags.
+Som en 4-mands gruppe blev vi nød til at dele arbejdet op (mest fordi vi fik besked på det). Simon og Jonas kom til at stå for at få forummet op og køre, Maya lavede de generelle funktioner der skal bruges på alle sider (forbind til databasen, layout-ting, menu, css) og et script til at oprette en fungerende database til siden. Sofie kom til at stå for brugerdatabasen - login, autentificering, administration og den slags.
 
 \subsection{E/R-diagram}
 For at få et overblik over hvad vores database skulle indeholde, lavede vi et E/R-diagram.
@@ -127,7 +127,9 @@ Forsiden er hvad brugeren ser når han går ind på vores side. Her skal være t
 
 Hver aktivitet beskrevet i boksene skal være et link til den pågældende forum-post eller artikel.
 
-De fine bokse der viser den seneste aktivitet fungerer ved hjælp af et simpelt SQL udtræk som finder de artikler og forum-posts med højeste ID. Herefter bliver tekst-længden skåret ned, en smule JavaScript der sørger for at de relevante bbcode tags bliver erstattet med html. Desuden bliver der kørt nogle regex'es for at fjerne kode-tags, da de fylder alt for meget til at have stående på forsiden.
+\includegraphics[width=100mm]{mi19.png}
+
+De fine bokse der viser den seneste aktivitet fungerer ved hjælp af et simpelt SQL udtræk som finder de artikler og forum-posts med højeste ID. Herefter bliver tekst-længden skåret ned og kørt igennem en smule JavaScript der sørger for at de relevante bbcode tags bliver erstattet med html. Desuden bliver der kørt nogle regex'es for at fjerne kode-tags, da de fylder alt for meget til at have stående på forsiden.
 
 \subsubsection[Forum-forsiden]{Forum-forsiden - forum.php}
 Forummet er organiseret i kategorier, fora, tråde og posts. En kategori er et overordnet emne, fx 'Programmering' eller 'Rollespil'. Under hver kategori kan man så have fora - under Programmerings-kategorien kunne man for eksempel have fora for forskellige programmeringssprog. I et fora kan man så have tråde, som brugerne kan oprette, med emner som for eksempel 'Hjælp med strcpy() funktionen'. Brugere kan så besvare tråde med posts.
@@ -149,7 +151,7 @@ Admin menuen og dens undersider er lavet på en brugervenlig måde, så man kan 
 
 Disse sider er ”bag facaden” hvilket vil sige at der her ikke gøres så meget ud af bruger interfacet, men mere det funktionelle.
 
-HSelve admin-menuens forside viser en liste af alle kategorierne, og et link med teksten 'Opret kategori', som fører til 'Opret kategori'-siden. Ud for hver kategori er der en slet-knap. Klikker man på slet-knappen, popper der en lille boks op og spørger om man er sikker på at man vil slette en hel kategori. Klikker man OK bliver kategorien og alle tilhørende fora, tråde og posts slettet. Klikker man på en kategori kommer man til 'Rediger kategori'-siden. 
+Selve admin-menuens forside viser en liste af alle kategorierne, og et link med teksten 'Opret kategori', som fører til 'Opret kategori'-siden. Ud for hver kategori er der en slet-knap. Klikker man på slet-knappen, popper der en lille boks op og spørger om man er sikker på at man vil slette en hel kategori. Klikker man OK bliver kategorien og alle tilhørende fora, tråde og posts slettet. Klikker man på en kategori kommer man til 'Rediger kategori'-siden. 
 
 \includegraphics[width=100mm]{mi01.png}
 
