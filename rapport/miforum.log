@@ -1,17 +1,11 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.7)  17 JAN 2012 15:27
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.1.8)  17 JAN 2012 21:22
 entering extended mode
  %&-line parsing enabled.
 **miforum.tex
 (./miforum.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, farsi, arabic, croatian, bulgarian, ukrainian, russian, czech, slov
-ak, danish, dutch, finnish, french, basque, ngerman, german, german-x-2009-06-1
-9, ngerman-x-2009-06-19, ibycus, monogreek, greek, ancientgreek, hungarian, san
-skrit, italian, latin, latvian, lithuanian, mongolian2a, mongolian, bokmal, nyn
-orsk, romanian, irish, coptic, serbian, turkish, welsh, esperanto, uppersorbian
-, estonian, indonesian, interlingua, icelandic, kurmanji, slovenian, polish, po
-rtuguese, spanish, galician, catalan, swedish, ukenglish, pinyin, loaded.
+yphenation, loaded.
 (/usr/share/texmf-texlive/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texmf-texlive/tex/latex/base/size10.clo
@@ -29,7 +23,7 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/var/lib/texmf/tex/generic/babel/babel.sty
+(/usr/share/texmf-texlive/tex/generic/babel/babel.sty
 Package: babel 2008/07/06 v3.8l The Babel package
 
 (/usr/share/texmf-texlive/tex/generic/babel/danish.ldf
@@ -40,9 +34,14 @@ File: babel.def 2008/07/06 v3.8l Babel common definitions
 \babel@savecnt=\count87
 \U@D=\dimen103
 )
+
+Package babel Warning: No hyphenation patterns were loaded for
+(babel)                the language `Danish'
+(babel)                I will use the patterns loaded for \language=0 instead.
+
+\l@danish = a dialect from \language0
 Package babel Info: Making " an active character on input line 82.
-))
-(/usr/share/texmf-texlive/tex/latex/base/inputenc.sty
+)) (/usr/share/texmf-texlive/tex/latex/base/inputenc.sty
 Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
@@ -324,7 +323,7 @@ LaTeX Font Info:    ... okay on input line 29.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
 
-(/usr/share/texmf/tex/context/base/supp-pdf.mkii
+(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count97
 \scratchdimen=\dimen110
@@ -346,7 +345,13 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 31.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./miforum.toc
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (12.39658pt too wide) in paragraph at lines 38--39
+[]\OT1/cmr/m/n/9 Vores l^^\sningsforslag er et on-line diskus-sions-fo-rum hvor
+ man kan diskutere
+ []
+
+[2] (./miforum.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -355,24 +360,30 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write3
 \openout3 = `miforum.toc'.
 
-
-[3] <er-diag.jpg, id=18, 770.88pt x 377.91188pt>
+ [3] <er-diag.jpg, id=18, 770.88pt x 377.91188pt>
 File: er-diag.jpg Graphic file (type jpg)
- <use er-diag.jpg>
+
+<use er-diag.jpg>
 Overfull \hbox (11.43306pt too wide) in paragraph at lines 57--58
 [][] 
  []
 
+
+Overfull \hbox (6.13951pt too wide) in paragraph at lines 59--60
+[]\OT1/cmr/m/n/10 N^^War man snakker om databas-er find-es der en r^^Zkke nor-m
+al-former. En database
+ []
+
 [4 <./er-diag.jpg>]
 Overfull \hbox (3.86177pt too wide) in paragraph at lines 67--68
-\OT1/cmr/m/n/10 form. Der-u-d-over skal der en-ten ik-ke v^^Z-re no-gen sam-men
--sat-te kan-di-datn^^\gler(som
+\OT1/cmr/m/n/10 form. Deru-dover skal der en-ten ikke v^^Zre no-gen sam-men-sat
+-te kan-di-datn^^\gler(som
  []
 
 
 Overfull \hbox (2.66733pt too wide) in paragraph at lines 74--75
-[]\OT1/cmr/m/n/10 Dette op-fyl-der vo-res ta-bel ogs^^Wa. Vi har der-med op-fyl
-dt al-le nor-mal-for-mer(med
+[]\OT1/cmr/m/n/10 Dette op-fylder vores tabel ogs^^Wa. Vi har dermed op-fyldt a
+lle nor-mal-former(med
  []
 
 [5]
@@ -405,8 +416,8 @@ File: mi18.png Graphic file (type png)
  <use mi18.png>
 (./MIForumCode/ex10.htm) (./MIForumCode/ex11.php)
 Overfull \hbox (16.42874pt too wide) in paragraph at lines 181--181
-\OT1/cmr/bx/n/10 redcat.php, re-di-ger-forum.php, redcatque-ry.php, red-foraque
--ry.php 
+\OT1/cmr/bx/n/10 redcat.php, redi-ger-fo-rum.php, red-cat-query.php, red-fora-q
+ue-ry.php 
  []
 
 [10 <./mi18.png (PNG copy)>] <mi02.png, id=51, 692.5875pt x 542.025pt>
@@ -456,12 +467,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 305--309
 
 (./MIForumCode/ex09.php) [21 <./mi1415.png>] [22] [23] (./miforum.aux) ) 
 Here is how much of TeX's memory you used:
- 3239 strings out of 493848
- 40508 string characters out of 1152823
- 219157 words of memory out of 3000000
- 6456 multiletter control sequences out of 15000+50000
+ 3240 strings out of 495061
+ 40551 string characters out of 1182622
+ 218170 words of memory out of 3000000
+ 6359 multiletter control sequences out of 15000+50000
  9400 words of font info for 33 fonts, out of 3000000 for 9000
- 714 hyphenation exceptions out of 8191
+ 28 hyphenation exceptions out of 8191
  26i,8n,32p,768b,1585s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/s
 hare/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-
@@ -475,7 +486,7 @@ e/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1
 /public/amsfonts/cm/cmr9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
 nts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti
 10.pfb></usr/share/texmf-texlive/fonts/type1/public/txfonts/txtt.pfb>
-Output written on miforum.pdf (23 pages, 870325 bytes).
+Output written on miforum.pdf (23 pages, 871383 bytes).
 PDF statistics:
  147 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

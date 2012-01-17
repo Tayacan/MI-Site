@@ -35,3 +35,4 @@
 \contentsline {subsubsection}{\numberline {2.5.5}connect.php}{22}
 \contentsline {section}{\numberline {3}Afpr\IeC {\o }vning af siden}{22}
 \contentsline {subsection}{\numberline {3.1}Typiske problemer}{23}
+\contentsline {section}{\numberline {4}Konklusion}{23}
